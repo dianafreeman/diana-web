@@ -5,19 +5,19 @@
  * This contains both the comments and the comment form.
  */
 if ( post_password_required() ) { ?>
-	<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments','diana-theme'); ?>.</p>
+	<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments','landing-pagely'); ?>.</p>
 <?php return; } ?>
 
 <!-- You can start editing here. -->
 <?php if ( have_comments() ) : ?>
 	<div id="comments">
-		<div class="total-comments"><span><?php comments_number(__('No Comments','diana-theme'), __('One Comment','diana-theme'),  __('% Comments','diana-theme') );?></span></div>
+		<div class="total-comments"><span><?php comments_number(__('No Comments','landing-pagely'), __('One Comment','landing-pagely'),  __('% Comments','landing-pagely') );?></span></div>
 		<ol class="commentlist">
 			<div class="navigation">
 				<div class="alignleft"><?php previous_comments_link() ?></div>
 				<div class="alignright"><?php next_comments_link() ?></div>
 			</div>
-			<?php wp_list_comments('type=comment&callback=diana_theme_comment'); ?>
+			<?php wp_list_comments('type=comment&callback=landing_pagely_comment'); ?>
 			<div class="navigation bottomnav">
 				<div class="alignleft"><?php previous_comments_link() ?></div>
 				<div class="alignright"><?php next_comments_link() ?></div>
@@ -33,8 +33,8 @@ if ( post_password_required() ) { ?>
 	<div id="commentsAdd">
 		<div id="respond" class="box m-t-6">
 			<?php global $aria_req; $comments_args = array(
-				'title_reply'=>'<h4><span>'.__('Add a Comment','diana-theme').'</span></h4></h4>',
-				'label_submit' => __('Add Comment','diana-theme'),
+				'title_reply'=>'<h4><span>'.__('Add a Comment','landing-pagely').'</span></h4></h4>',
+				'label_submit' => __('Add Comment','landing-pagely'),
 				'comment_field' => '<p class="comment-form-comment">'.'<textarea id="comment" name="comment" cols="45" rows="5" aria-required="true">Comment</textarea></p>',
 				'fields' => apply_filters( 'comment_form_default_fields',
 					array(

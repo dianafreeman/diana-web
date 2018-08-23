@@ -105,14 +105,83 @@ add_action( 'after_setup_theme', 'diana_steakley_freeman_content_width', 0 );
  */
 function diana_steakley_freeman_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'diana-steakley-freeman' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'diana-steakley-freeman' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+		'name'          => esc_html__( 'Sidebar', 'diana-theme' ),
+		'id'            => 'sidebar',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title"><span>',
+		'after_title'   => '</span></h3>',
+   ) );
+
+    // First Top Widget 
+  register_sidebar( array(
+    'name'          => __( 'Top Widget 1', 'diana-theme' ),
+    'description'   => __( 'First Top Widget Column', 'diana-theme' ),
+    'id'            => 'top-widget-first',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+
+
+    // Second Top Widget 
+  register_sidebar( array(
+    'name'          => __( 'Top Widget 2', 'diana-theme' ),
+    'description'   => __( 'Second Top Widget Column', 'diana-theme' ),
+    'id'            => 'top-widget-second',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+
+    // Third Top Widget 
+  register_sidebar( array(
+    'name'          => __( 'Top Widget 3', 'diana-theme' ),
+    'description'   => __( 'Third Top Widget Column', 'diana-theme' ),
+    'id'            => 'top-widget-third',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+
+
+    // First Footer 
+  register_sidebar( array(
+    'name'          => __( 'Footer 1', 'diana-theme' ),
+    'description'   => __( 'First footer column', 'diana-theme' ),
+    'id'            => 'footer-first',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+
+	// Second Footer 
+  register_sidebar( array(
+    'name'          => __( 'Footer 2', 'diana-theme' ),
+    'description'   => __( 'Second footer column', 'diana-theme' ),
+    'id'            => 'footer-second',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+
+	// Third Footer 
+  register_sidebar( array(
+    'name'          => __( 'Footer 3', 'diana-theme' ),
+    'description'   => __( 'Third footer column', 'diana-theme' ),
+    'id'            => 'footer-third',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+
 }
 add_action( 'widgets_init', 'diana_steakley_freeman_widgets_init' );
 
@@ -131,6 +200,7 @@ function diana_steakley_freeman_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'diana_steakley_freeman_scripts' );
+
 
 /**
  * Implement the Custom Header feature.

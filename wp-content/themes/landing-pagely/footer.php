@@ -36,10 +36,10 @@
 	<div class="container">
 		<div class="row" id="copyright-note">
 			<span>
-				<?php echo '&copy; '.date_i18n(__('Y','diana-theme')); ?> <?php bloginfo( 'name' ); ?>
+				<?php echo '&copy; '.date_i18n(__('Y','landing-pagely')); ?> <?php bloginfo( 'name' ); ?>
 				<!-- Delete below lines to remove copyright from footer -->
 				<span class="footer-info-right">
-					<?php echo __(' | WordPress Theme by', 'diana-theme') ?> <a href="<?php echo esc_url('https://superbthemes.com/', 'diana-theme'); ?>"><?php echo __(' Superb Themes', 'diana-theme') ?></a>
+					<?php echo __(' | WordPress Theme by', 'landing-pagely') ?> <a href="<?php echo esc_url('https://superbthemes.com/', 'landing-pagely'); ?>"><?php echo __(' Superb Themes', 'landing-pagely') ?></a>
 				</span>
 				<!-- Delete above lines to remove copyright from footer -->
 			</span>

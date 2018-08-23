@@ -1,28 +1,14 @@
-/*!
-Theme Name: Diana Steakley-Freeman
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
-Version: 1.0.0
+/*
+Theme Name: Landing Pagely
+Author: ThemeEverest
+Version: 1.0
+Author URI: https://superbthemes.com/
+Description: Landing Pagely - The modern responsive WordPress agency, technology and digital marketing company business theme. Our theme makes it easy to create a simple and minimalistic landing page, one page or single page for your app / software product / website. The code is clean, elegant and SEO optimized ( search engine optimization ). You can use the theme as something as simple as a blog, writing-, journalist- or photography portfolio where you showcase and present your view creatively on regular blogging topics such as travel, crypto currency such as bitcoins, lifestyle, beauty or anything else. If you wish you can create a 1 page corporate website easily and be noticed with Landing Pagely.
 License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: diana-steakley-freeman
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Diana Steakley-Freeman is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: landing-pagely
+Tags: two-columns, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready, blog
 */
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-
 
 html {
     font-family: sans-serif;
@@ -378,15 +364,15 @@ textarea {
     width: 100%;
 }
 @font-face {
-    font-family: 'diana-theme';
-    src: url('fonts/diana-theme.eot');
-    src: url('fonts/diana-theme.eot#iefix') format('embedded-opentype'), url('fonts/diana-theme.woff2') format('woff2'), url('fonts/diana-theme.woff') format('woff'), url('fonts/diana-theme.ttf') format('truetype'), url('fonts/diana-theme.svg') format('svg');
+    font-family: 'landing-pagely';
+    src: url('fonts/landing-pagely.eot');
+    src: url('fonts/landing-pagely.eot#iefix') format('embedded-opentype'), url('fonts/landing-pagely.woff2') format('woff2'), url('fonts/landing-pagely.woff') format('woff'), url('fonts/landing-pagely.ttf') format('truetype'), url('fonts/landing-pagely.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-    font-family: "diana-theme";
+    font-family: "landing-pagely";
     font-style: normal;
     font-weight: normal;
     speak: none;
@@ -704,7 +690,7 @@ a#pull {
 }
 .menu-item-has-children > a:after {
     content: '\f107';
-    font-family: 'diana-theme';
+    font-family: 'landing-pagely';
     position: absolute;
     right: 20px;
 }
@@ -2854,7 +2840,7 @@ img.custom-logo {
         display: inline-block;
         position: absolute;
         right: 2%;
-        font-family: "diana-theme";
+        font-family: "landing-pagely";
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }

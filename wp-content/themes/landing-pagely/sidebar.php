@@ -7,7 +7,7 @@
  * @package landing Lite
  */
 
-$sidebar = diana_theme_custom_sidebar(); ?>
+$sidebar = landing_pagely_custom_sidebar(); ?>
 
 <aside class="sidebar c-4-12">
 	<div id="sidebars" class="sidebar">

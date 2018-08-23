@@ -14,11 +14,11 @@ get_header(); ?>
 		<div class="single_post">
 			<div class="error-404-content">
 				<header>
-					<h1 class="title"><?php _e('Error 404', 'diana-theme' ); ?></h1>
+					<h1 class="title"><?php _e('Error 404', 'landing-pagely' ); ?></h1>
 				</header>
 				<div class="post-content">
-					<p><?php _e('Oops! We couldn\'t find this Page.', 'diana-theme' ); ?></p>
-					<p><?php _e('Please check your URL or use the pagely form below.', 'diana-theme' ); ?></p>
+					<p><?php _e('Oops! We couldn\'t find this Page.', 'landing-pagely' ); ?></p>
+					<p><?php _e('Please check your URL or use the pagely form below.', 'landing-pagely' ); ?></p>
 					<?php get_pagely_form();?>
 				</div><!--.post-content--><!--#error404 .post-->
 			</div>

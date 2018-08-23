@@ -21,11 +21,11 @@
 			<span><?php the_archive_title(); ?></span>
 		</h1>	
 		<?php if ( have_posts() ) :
-			$diana_theme_full_posts = get_theme_mod('diana_theme_full_posts');
+			$landing_pagely_full_posts = get_theme_mod('landing_pagely_full_posts');
 			while ( have_posts() ) : the_post();
-				diana_theme_archive_post();
+				landing_pagely_archive_post();
 			endwhile;
-			diana_theme_post_navigation();
+			landing_pagely_post_navigation();
 		endif; ?>
 	</div>
 	<?php get_sidebar(); ?>

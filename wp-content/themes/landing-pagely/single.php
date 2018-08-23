@@ -6,18 +6,18 @@
  *
  * @package landing Lite
  */
-$diana_theme_single_breadcrumb_section = get_theme_mod('diana_theme_single_breadcrumb_section', '1');
-$diana_theme_single_tags_section = get_theme_mod('diana_theme_single_tags_section', '1');
-$diana_theme_authorbox_section = get_theme_mod('diana_theme_authorbox_section', '1');
-$diana_theme_relatedposts_section = get_theme_mod('diana_theme_relatedposts_section', '1');
+$landing_pagely_single_breadcrumb_section = get_theme_mod('landing_pagely_single_breadcrumb_section', '1');
+$landing_pagely_single_tags_section = get_theme_mod('landing_pagely_single_tags_section', '1');
+$landing_pagely_authorbox_section = get_theme_mod('landing_pagely_authorbox_section', '1');
+$landing_pagely_relatedposts_section = get_theme_mod('landing_pagely_relatedposts_section', '1');
 
 get_header(); ?>
 
 <div id="page" class="single">
 	<div class="content">
 		<!-- Start Article -->
-		<?php if($diana_theme_single_breadcrumb_section == '0') { ?>
-		<div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#"><?php diana_theme_the_breadcrumb(); ?></div>
+		<?php if($landing_pagely_single_breadcrumb_section == '0') { ?>
+		<div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#"><?php landing_pagely_the_breadcrumb(); ?></div>
 		<?php } ?>
 		<article class="article">		
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -34,14 +34,14 @@ get_header(); ?>
 					</header>
 
 						<?php the_content(); ?>
-						<?php wp_link_pages(array('before' => '<div class="pagination">', 'after' => '</div>', 'link_before'  => '<span class="current"><span class="currenttext">', 'link_after' => '</span></span>', 'next_or_number' => 'next_and_number', 'nextpagelink' => __('Next', 'diana-theme' ), 'previouspagelink' => __('Previous', 'diana-theme' ), 'pagelink' => '%','echo' => 1 )); ?>
-						<?php if($diana_theme_single_tags_section == '1') { ?>
+						<?php wp_link_pages(array('before' => '<div class="pagination">', 'after' => '</div>', 'link_before'  => '<span class="current"><span class="currenttext">', 'link_after' => '</span></span>', 'next_or_number' => 'next_and_number', 'nextpagelink' => __('Next', 'landing-pagely' ), 'previouspagelink' => __('Previous', 'landing-pagely' ), 'pagelink' => '%','echo' => 1 )); ?>
+						<?php if($landing_pagely_single_tags_section == '1') { ?>
 						<!-- Start Tags -->
-						<div class="tags"><?php the_tags('<span class="tagtext">'.__('Tags','diana-theme').':</span>',', ') ?></div>
+						<div class="tags"><?php the_tags('<span class="tagtext">'.__('Tags','landing-pagely').':</span>',', ') ?></div>
 						<!-- End Tags -->
 						<?php } ?>
 					</div><!-- End Content -->
-					<?php if($diana_theme_relatedposts_section == '1') { ?>	
+					<?php if($landing_pagely_relatedposts_section == '1') { ?>	
 					<!-- Start Related Posts -->
 					<?php $categories = get_the_category($post->ID); 
 					if ($categories) { $category_ids = array(); 
@@ -53,7 +53,7 @@ get_header(); ?>
 							'showposts'=> 3,
 							'orderby' => 'rand' );
 						$my_query = new wp_query( $args ); if( $my_query->have_posts() ) {
-							echo '<div class="related-posts"><div class="postauthor-top"><h3>'.__('Related Posts', 'diana-theme').'</h3></div><div class="related-posts-wrapper">';
+							echo '<div class="related-posts"><div class="postauthor-top"><h3>'.__('Related Posts', 'landing-pagely').'</h3></div><div class="related-posts-wrapper">';
 							$pexcerpt=1; $j = 0; $counter = 0; 
 							while( $my_query->have_posts() ) { 
 								$my_query->the_post();?>
@@ -79,10 +79,10 @@ get_header(); ?>
 								<?php } echo '</div></div>'; }} wp_reset_postdata(); ?>
 								<!-- End Related Posts -->
 								<?php }?>  
-								<?php if($diana_theme_authorbox_section == '1') { ?>
+								<?php if($landing_pagely_authorbox_section == '1') { ?>
 								<!-- Start Author Box -->
 								<div class="postauthor">
-									<h4><?php _e('About The Author', 'diana-theme'); ?></h4>
+									<h4><?php _e('About The Author', 'landing-pagely'); ?></h4>
 									<?php if(function_exists('get_avatar')) { echo get_avatar( get_the_author_meta('email'), '85' );  } ?>
 									<h5><?php the_author(); ?></h5>
 									<p><?php the_author_meta('description') ?></p>

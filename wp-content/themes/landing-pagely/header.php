@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 	<div class="main-container">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'diana-theme' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'landing-pagely' ); ?></a>
 		<header id="site-header" role="banner">
 			<?php if ( get_theme_mod( 'toggle_header_frontpage' ) == '' ) : ?>
 			<div class="primary-navigation header-activated">
@@ -32,7 +32,7 @@
 			<div class="primary-navigation">
 			<?php endif; ?>
 		<?php endif; ?>
-		<a href="#" id="pull" class="toggle-mobile-menu"><?php _e('Menu', 'diana-theme'); ?></a>
+		<a href="#" id="pull" class="toggle-mobile-menu"><?php _e('Menu', 'landing-pagely'); ?></a>
 		<div class="container clear">
 			<nav id="navigation" class="primary-navigation mobile-menu-wrapper" role="navigation">
 				<?php if (has_custom_logo()) { ?>
