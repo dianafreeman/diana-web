@@ -1,0 +1,16 @@
+{
+  "name": "diana-surge",
+  "version": "1.0.0",
+  "description": "Diana's Fancier Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.3",
+    "jquery.easing": "^1.4.1",
+    "typed.js": "^2.0.9"
+  }
+}
