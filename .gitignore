@@ -48,7 +48,8 @@ node_modules
 build
 npm-debug.log
 .env
-sass-cache
+sass-cache/
+/.sass-cache
 package-lock*
 
 

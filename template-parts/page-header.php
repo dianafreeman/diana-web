@@ -1,5 +1,5 @@
 
-<header class="masthead bg-primary text-white text-center">
+<header style="height: 300px;" class="masthead bg-primary text-white text-center">
   <div class="container">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <div id="<?php echo esc_attr(the_ID()); ?>">

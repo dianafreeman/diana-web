@@ -252,7 +252,7 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * Custom Nav Walker (using bootstrap) for this theme.
  */
-require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
+require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
@@ -267,7 +267,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
+require get_template_directory() . '/inc/jetpack.php';
+
+require get_template_directory() . '/inc/understrap-includes.php';
 

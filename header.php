@@ -4,52 +4,84 @@
 * This displays the top HTML element through the bottom of the NAV element.
 * The template that follows this should be "Bottom Header"
 */
+
+if ( ! defined( 'ABSPATH' ) ) {
+  exit; // Exit if accessed directly.
+}
+
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
+<head>
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="profile" href="http://gmpg.org/xfn/11">
+  <?php wp_head(); ?>
+</head>
 
-  <head>
+<body <?php body_class(); ?>>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<div class="site" id="page">
 
-    <title>Diana M. Steakley-Freeman </title>
+  <!-- ******************* The Navbar Area ******************* -->
+  <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-<style type="text/css" media="screen" async>
-  main{
-    height: 50vw;
-  }
-</style>
-<?php wp_head() ;?>
+    <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-  </head>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
 
-  <body id="page-top">
+    <?php if ( 'container' == $container ) : ?>
+      <div class="container" >
+    <?php endif; ?>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-dark fixed-top text-uppercase" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
-        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
+          <!-- Your site title as branding in the menu -->
+          <?php if ( ! has_custom_logo() ) { ?>
+
+            <?php if ( is_front_page() && is_home() ) : ?>
+
+              <h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+
+            <?php else : ?>
+
+              <a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+
+            <?php endif; ?>
+
+
+          <?php } else {
+            the_custom_logo();
+          } ?><!-- end custom logo -->
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Connect</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+
+        <!-- The WordPress Menu goes here -->
+        <?php wp_nav_menu(
+          array(
+            'theme_location'  => 'primary',
+            'container_class' => 'collapse navbar-collapse',
+            'container_id'    => 'navbarNavDropdown',
+            'menu_class'      => 'navbar-nav ml-auto',
+            'fallback_cb'     => '',
+            'menu_id'         => 'main-menu',
+            'depth'           => 2,
+            'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+          )
+        ); ?>
+      <?php if ( 'container' == $container ) : ?>
+      </div><!-- .container -->
+      <?php endif; ?>
+
+    </nav><!-- .site-navigation -->
+
+  </div><!-- #wrapper-navbar end -->
+
     <!-- Header -->
+    <?php if (!is_front_page()): 
+
+      get_template_part('template-parts/page','header');
+      endif;
+            ?>
     

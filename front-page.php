@@ -1,5 +1,27 @@
 <?php 
 get_header();
+?> <nav class="navbar navbar-expand-lg bg-dark fixed-top text-uppercase navbar-shrink" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Connect</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><?php
 if (is_front_page()){
   get_template_part('template-parts/front-page','header') ;
 };
@@ -82,7 +104,7 @@ if (is_front_page()){
     <div class="row">
       <div class="col-lg-8 mx-auto">
 
-        
+
         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
         <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
         <form name="sentMessage" id="contactForm" novalidate="novalidate">

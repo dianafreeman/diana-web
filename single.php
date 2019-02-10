@@ -1,35 +1,53 @@
-<?php 
-get_header(); 
+<?php
+/**
+ * The template for displaying all single posts.
+ *
+ * @package understrap
+ */
 
-get_template_part('template-parts/page','header') ;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+get_header();
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<!-- Page Content Section -->
-<section class="page-content">
-  <div class="container">
-    <?php if (is_category( 'projects' )){
+<div class="wrapper" id="single-wrapper">
 
-      $icon_val = 'file-dark';
+	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-    }
+		<div class="row">
 
-      else if (is_category('technologies')){
-      $icon_val = 'stack-dark';
+			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-      } else {
-        $icon_val = 'user-dark' ;
-      };?>
-    <hr class="<?php echo esc_attr($icon_val) ;?> mb-5">
-    <div class="row">
-      <div class="col-sm-12">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <?php the_content();?>
-          <?php 
-        endwhile;
-      endif;
-      ?>
-    </div>
-  </div>
-</div>
-</section>
+			<main class="site-main" id="main">
+
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+
+					<?php understrap_post_nav(); ?>
+
+					<?php
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+					?>
+
+				<?php endwhile; // end of the loop. ?>
+
+			</main><!-- #main -->
+
+			<!-- Do the right sidebar check -->
+			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+
+		</div><!-- .row -->
+
+	</div><!-- #content -->
+
+</div><!-- #single-wrapper -->
+
 <?php get_footer(); ?>
