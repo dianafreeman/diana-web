@@ -1,0 +1,10 @@
+{
+  "undef": true,
+  "unused": true,
+  "curly": true,
+  
+  "globals": {
+    "THEME_DIR": true,
+    "SITE_URL": true
+  }
+}

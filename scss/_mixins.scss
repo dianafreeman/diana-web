@@ -1,0 +1,25 @@
+@mixin body-font() {
+  font-family: 'Lato';
+}
+
+@mixin heading-font($font-weight: 700) {
+  font-weight: $font-weight;
+  font-family: 'Montserrat';
+}
+
+@mixin typed-font(){
+  font-weight: 400;
+  font-family: 'Space Mono', monospace;
+}
+
+@mixin creative-font(){
+	font-family: 'Playball', cursive;
+}
+
+@mixin text-shadow($color: black){
+	   text-shadow:
+   -1px -1px 0 $color,
+    1px -1px 0 $color,
+    -1px 1px 0 $color,
+     1px 1px 0 $color
+}

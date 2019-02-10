@@ -1,0 +1,142 @@
+
+
+
+header.masthead {
+  background-image: url('../assets/hero-original.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 2em;
+  position: relative; // used as a relative container for the #animation-control
+  .background-div{
+    padding-top: calc(120px + 5vw);;
+    padding-bottom: 6rem;
+    &.final-state{
+    background-color: #1d21246e;
+
+    }
+  }
+    h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    @include body-font;
+    &#subhead{
+    font-size: 30px;
+    font-weight: 500;
+    font-style: italic;
+    color: #eee;
+   @include text-shadow(black)
+    }
+  }
+ 
+
+
+
+  @media (min-width: 992px) {
+    header.masthead {
+      padding-top: calc(6rem + 106px);
+      padding-bottom: 6rem;
+      h1 {
+        font-size: 4.75em;
+        line-height: 4rem;
+      }
+      h2 {
+        font-size: 1.75em;
+      }
+
+    }
+  }
+
+}
+
+#typed-header{
+  position: static;
+    width: 90%;
+    margin: 0 auto;
+    .string-container{
+    padding: calc(20px + 1vw);
+    border-radius: 10px;
+    margin: 0 auto;
+    display: inline-flex;
+    min-height: 110px;
+    h1 {
+     @include text-shadow(#eee);
+      &.typed-font{
+        @include typed-font();
+      }
+    }
+  }
+
+  .sub-heading{
+    color: #eee;
+     text-shadow:
+   -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+     1px 1px 0 black;
+  }
+}
+
+
+.fade-out-background{
+  animation-name: fadeToPrimary;
+  animation-duration: 1.25s;
+
+}
+
+@keyframes fadeToPrimary {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: #1d21246e;
+       
+
+  }
+}
+.typed-font{
+ @include typed-font();
+}
+
+.creative-font{
+  @include creative-font();
+}
+
+.communicate-font{
+   @include heading-font(400);
+}
+
+#typed-header .final-header{
+  position: absolute;
+  width: inherit;
+  h1.communicate-font{
+    @include heading-font(700);
+      font-size: 3.75em;
+  }
+  }
+
+  #typed-string, #final-string {
+   // @include typed-font();
+    font-size: 3rem;  
+    display: block;
+    min-height: 60px;
+
+  }
+
+  .typed-cursor{
+    font-size: 2rem;
+    display: flex;
+     color: #eee;
+   @include text-shadow(black);
+  }
+
+
+
+#animation-control{
+    position: absolute;
+    right: 2em;
+    bottom: 1em;
+  }
