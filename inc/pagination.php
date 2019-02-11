@@ -5,48 +5,55 @@
  * @package understrap
  */
 
-if ( ! function_exists ( 'understrap_pagination' ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
-    function understrap_pagination($args = [], $class = 'pagination') {
+if ( ! function_exists( 'diana_simple_pagination' ) ) {
 
-        if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
+	function diana_simple_pagination( $args = array(), $class = 'pagination' ) {
 
-        $args = wp_parse_args( $args, [
-            'mid_size'           => 2,
-            'prev_next'          => true,
-            'prev_text'          => __('&laquo;', 'understrap'),
-            'next_text'          => __('&raquo;', 'understrap'),
-            'screen_reader_text' => __('Posts navigation', 'understrap'),
-            'type'               => 'array',
-            'current'            => max( 1, get_query_var('paged') ),
-        ]);
+		if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) {
+			return;
+		}
 
-        $links = paginate_links($args);
+		$args = wp_parse_args(
+			$args,
+			array(
+				'mid_size'           => 2,
+				'prev_next'          => true,
+				'prev_text'          => __( '&laquo;', 'understrap' ),
+				'next_text'          => __( '&raquo;', 'understrap' ),
+				'screen_reader_text' => __( 'Posts navigation', 'understrap' ),
+				'type'               => 'array',
+				'current'            => max( 1, get_query_var( 'paged' ) ),
+			)
+		);
 
-        ?>
+		$links = paginate_links( $args );
 
-        <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+		?>
 
-            <ul class="pagination">
+		<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
 
-                <?php
+			<ul class="pagination">
 
-                    foreach ( $links as $key => $link ) { ?>
+				<?php
+				foreach ( $links as $key => $link ) {
+					?>
+					<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
+						<?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+					</li>
+					<?php
+				}
+				?>
 
-                        <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : '' ?>">
+			</ul>
 
-                            <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+		</nav>
 
-                        </li>
-
-                <?php } ?>
-
-            </ul>
-
-        </nav>
-
-        <?php
-    }
+		<?php
+	}
 }
 
 ?>

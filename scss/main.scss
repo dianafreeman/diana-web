@@ -11,6 +11,12 @@
 @import "../node_modules/bootstrap/scss/code";
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/utilities";
+
+// Understrap Base
+@import "understrap.scss";
+
+// TO DO: Font Awesome
 
 
 // Mine
@@ -24,8 +30,18 @@
 @import "about.scss";
 
 
-section:nth-child(odd){
-	    background-image: url('../assets/background.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-}
+ .front-page-section{
+ 	&:nth-child(even){
+ 	@extend .bg-dark;
+ 	h2{
+ 		@extend .text-light;
+ 	}
+ 	}
+
+ &:nth-child(even){
+ 	@extend .bg-light;
+ 	h2{
+ 		@extend .text-dark;
+ 	}
+ }
+ }

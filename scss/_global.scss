@@ -86,7 +86,7 @@ hr.file-light:after,
 hr.user-light:after,
 hr.envelope-light:after {
   color: $white;
-  background-color: $primary;
+ // background-color: $primary;
 }
 
 hr.stack-dark,
@@ -100,12 +100,12 @@ hr.file-dark:after,
 hr.user-dark:after ,
 hr.envelope-dark:after  {
   color: $secondary;
-  background-color: white;
+ // background-color: white;
 }
 
 // Section Padding Settings
 section {
-  padding: 6rem 0;
+  .container{padding: 3rem 0;}
   h2 {
     font-size: 2.25rem;
     line-height: 2rem;

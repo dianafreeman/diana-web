@@ -1,13 +1,19 @@
 
+#masthead.fixed{
+    background-attachment: fixed !important;
+    background-position-y: -160px !important;
 
+  }
 
-header.masthead {
+#masthead {
   background-image: url('../assets/hero-original.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: center;
   padding-top: 2em;
   position: relative; // used as a relative container for the #animation-control
+  width: 100%;
   .background-div{
     padding-top: calc(120px + 5vw);;
     padding-bottom: 6rem;
@@ -83,7 +89,7 @@ header.masthead {
 
 .fade-out-background{
   animation-name: fadeToPrimary;
-  animation-duration: 1.25s;
+  animation-duration: 1.5s;
 
 }
 
@@ -97,6 +103,23 @@ header.masthead {
 
   }
 }
+
+.fade-in-background{
+  animation-name: fadeFromWhite;
+  animation-duration: 2s;
+
+}
+
+@keyframes fadeFromWhite{
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: none;
+       
+
+  }
+  }
 .typed-font{
  @include typed-font();
 }
