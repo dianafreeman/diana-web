@@ -3,7 +3,7 @@
 ?>
 
 
-<header class="masthead text-center">
+<header id="masthead" class="text-center">
     <div class="background-div final-state">
 
   <div id="typed-header">
