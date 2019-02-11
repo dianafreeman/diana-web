@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      files: ['Gruntfile.js', 'js/type-index.js'],
+      files: ['Gruntfile.js', 'js/type-index.js', 'js/main.js'],
       options: {
         globals: {
           jQuery: true
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     options: { livereload: true }
   }, 
   scripts:{
-    files:['js/type-index.js'],
+    files:['js/type-index.js','js/main.js'],
     tasks: ['jshint']
 
   }

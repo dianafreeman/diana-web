@@ -8,7 +8,6 @@
   "scripts": {
     "workspace": "open README* && subl -n . && grunt",
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -17,6 +16,7 @@
     "bootstrap": "^4.2.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.1",
     "grunt": "^1.0.3",
     "grunt-contrib-connect": "^2.0.0",
     "grunt-contrib-jshint": "^2.0.0",

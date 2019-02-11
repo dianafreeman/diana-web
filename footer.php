@@ -20,23 +20,23 @@
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fa fa-fw fa-twitter"></i>
+                  <i class="fab fa-fw fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fa fa-fw fa-linkedin"></i>
+                  <i class="fab fa-fw fa-linkedin"></i>
                 </a>
               </li>
                <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fa fa-fw fa-medium"></i>
+                  <i class="fab fa-fw fa-medium"></i>
                 </a>
               </li>
                </li>
                <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fa fa-fw fa-git"></i>
+                  <i class="fab fa-fw fa-git"></i>
                 </a>
               </li>
             </ul>

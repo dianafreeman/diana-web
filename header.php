@@ -12,12 +12,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <!DOCTYPE html>
+<div class="bg-warning" style="position:fixed; height: fit-content; z-index: 99">
+<h2 class="text-center"> Heads Up -- This site is under construction. Some functionalities are disabled </h2>
+</div>
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <?php wp_head(); ?>
+  <style>
+.fixed-top{ top: 75px !important; }
+</style>
 </head>
 
 <body <?php body_class(); ?>>
@@ -29,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
     <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-    <nav id="mainNav" class="navbar navbar-expand-lg bg-dark fixed-top">
+    <nav id="mainNav" class="navbar navbar-expand-md bg-dark fixed-top">
 
     <?php if ( 'container' == $container ) : ?>
       <div class="container" >
@@ -54,7 +60,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           } ?><!-- end custom logo -->
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x text-white"> </i></span>
         </button>
 
         <!-- The WordPress Menu goes here -->

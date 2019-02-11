@@ -38,7 +38,7 @@ $('#typed-header .final-header').css('opacity', '0');
 // We don't use the hidden class here, because this should be visible without javascript enabled.
 $('h2#subhead').css('opacity', '0');
 
-$('.background-div').toggleClass('final-state');
+$('#masthead .background-div').toggleClass('final-state').addClass('fade-in-background');
 
 
 
@@ -49,7 +49,7 @@ var options = {
 	typeSpeed: 90,
 	showCursor: true,
 	autoInsertCss: true,
-	startDelay: 1000,
+	startDelay: 2000,
 	onStringTyped: onStringTyped,
 	onDestroy: revealfrontPage,
 	onComplete: onComplete
@@ -58,10 +58,10 @@ var options = {
 var typed = new Typed("#typed-string", options);
 
 $('#pause').toggle(function(){
-	$(this).text('Play');
+	$(this).find('i').toggleClass('fa-play fa-pause');
 	typed.stop();
 },function(){
-	$(this).text('Pause');
+	$(this).find('i').toggleClass('fa-play fa-pause');
 	typed.start(); 
 });
 
@@ -77,7 +77,8 @@ $('#skip').click( function (){
 function revealfrontPage(){
 	 jQuery('#typed-header .final-header').css('opacity','1');
 	 jQuery('#typed-header .start-header').css('opacity','0');
-	 jQuery('h2#subhead').css('opacity', '1');
+	 jQuery('#typed-string').text('Hi. I\'m Diana')
+	 jQuery('#subhead').css('opacity', '1');
 	 destroyAnimationControls();
 
 
@@ -107,12 +108,10 @@ function onComplete(typed){
 	var finalHeader = $('#typed-header .final-header');
 	var startHeader = $('#typed-header .start-header');
 
-
-
 	setTimeout(function(){
-			$('header.masthead .background-div').addClass('fade-out-background');
+			$('#masthead .background-div').addClass('fade-out-background');
 			setTimeout(function(){
-						$('header.masthead .background-div').addClass('final-state');
+						$('#masthead .background-div').addClass('final-state');
 
 					}, 500);
 	}, 500);
@@ -126,7 +125,7 @@ function fadeToFinal(){
 	
 	setTimeout(function(){
 	$('h2#subhead').removeClass('hidden').addClass('text-focus-in');
-	$('.typed-cursor').hide();
+	$('.typed-cursor').addClass('hidden');
 		setTimeout(destroyAnimationControls, 1000);
 
 	}, 2000);

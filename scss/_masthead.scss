@@ -1,7 +1,9 @@
 
 #masthead.fixed{
+  @media screen and (min-width: 768px){
     background-attachment: fixed !important;
     background-position-y: -160px !important;
+  }
 
   }
 
@@ -11,52 +13,32 @@
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
+
   padding-top: 2em;
   position: relative; // used as a relative container for the #animation-control
   width: 100%;
   .background-div{
+    @extend .static;
     padding-top: calc(120px + 5vw);;
     padding-bottom: 6rem;
     &.final-state{
-    background-color: #1d21246e;
+   background-color: #1d21246e;
 
     }
   }
-    h1 {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-    @include body-font;
-    &#subhead{
-    font-size: 30px;
+  
+  #subhead {
+    font-size: 20px;
     font-weight: 500;
     font-style: italic;
     color: #eee;
-   @include text-shadow(black)
-    }
+     @include text-shadow(black);
+       @media screen and (min-width: 525px){
+    font-size: 1.5em;
+   }
   }
- 
-
-
-
-  @media (min-width: 992px) {
-    header.masthead {
-      padding-top: calc(6rem + 106px);
-      padding-bottom: 6rem;
-      h1 {
-        font-size: 4.75em;
-        line-height: 4rem;
-      }
-      h2 {
-        font-size: 1.75em;
-      }
-
-    }
-  }
-
 }
+ 
 
 #typed-header{
   position: static;
@@ -83,6 +65,10 @@
     1px -1px 0 black,
     -1px 1px 0 black,
      1px 1px 0 black;
+     font-size: 1.25em;
+  @media screen and (min-width: 525px){
+    font-size: 1.85em;
+  }
   }
 }
 
@@ -137,15 +123,17 @@
   width: inherit;
   h1.communicate-font{
     @include heading-font(700);
-      font-size: 3.75em;
+    
   }
   }
 
   #typed-string, #final-string {
-   // @include typed-font();
-    font-size: 3rem;  
+  font-size: 1.75em;
     display: block;
     min-height: 60px;
+    @media screen and (min-width: 525px){
+      font-size: 2.5em;
+    }
 
   }
 

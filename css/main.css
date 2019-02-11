@@ -2043,27 +2043,23 @@ button.bg-danger:focus {
   background-color: #ea1c0d !important;
 }
 
-.bg-light, .front-page-section:nth-child(even) {
+.bg-light {
   background-color: #FCFAFA !important;
 }
 
-a.bg-light:hover, a.front-page-section:hover:nth-child(even), a.bg-light:focus, a.front-page-section:focus:nth-child(even),
+a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
-button.front-page-section:hover:nth-child(even),
-button.bg-light:focus,
-button.front-page-section:focus:nth-child(even) {
+button.bg-light:focus {
   background-color: #e9dada !important;
 }
 
-.bg-dark, .front-page-section:nth-child(even) {
+.bg-dark {
   background-color: #314251 !important;
 }
 
-a.bg-dark:hover, a.front-page-section:hover:nth-child(even), a.bg-dark:focus, a.front-page-section:focus:nth-child(even),
+a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
-button.front-page-section:hover:nth-child(even),
-button.bg-dark:focus,
-button.front-page-section:focus:nth-child(even) {
+button.bg-dark:focus {
   background-color: #1e2831 !important;
 }
 
@@ -5695,7 +5691,7 @@ a.text-danger:hover, a.text-danger:focus {
   color: #d2190b !important;
 }
 
-.text-light, .front-page-section:nth-child(even) h2 {
+.text-light {
   color: #FCFAFA !important;
 }
 
@@ -5703,7 +5699,7 @@ a.text-light:hover, a.text-light:focus {
   color: #dfcaca !important;
 }
 
-.text-dark, .front-page-section:nth-child(even) h2 {
+.text-dark {
   color: #314251 !important;
 }
 
@@ -5863,6 +5859,10 @@ a.skip-link {
   font-weight: 400;
 }
 
+.bg2::after {
+  background-image: url("https://placekitten.com/g/800/600");
+}
+
 body {
   font-family: "Lato";
 }
@@ -6011,6 +6011,9 @@ section h2 {
   font-weight: 700;
   font-family: "Montserrat";
 }
+#mainNav.logged-in {
+  margin-top: 30px;
+}
 #mainNav .navbar-brand {
   color: #fff;
 }
@@ -6069,9 +6072,11 @@ section h2 {
     font-size: 1.5em;
   }
 }
-#masthead.fixed {
-  background-attachment: fixed !important;
-  background-position-y: -160px !important;
+@media screen and (min-width: 768px) {
+  #masthead.fixed {
+    background-attachment: fixed !important;
+    background-position-y: -160px !important;
+  }
 }
 
 #masthead {
@@ -6091,32 +6096,16 @@ section h2 {
 #masthead .background-div.final-state {
   background-color: #1d21246e;
 }
-#masthead h1 {
-  font-size: 3rem;
-  line-height: 3rem;
-}
-#masthead h2 {
-  font-size: 1.3rem;
-  font-family: "Lato";
-}
-#masthead h2#subhead {
-  font-size: 30px;
+#masthead #subhead {
+  font-size: 20px;
   font-weight: 500;
   font-style: italic;
   color: #eee;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
-@media (min-width: 992px) {
-  #masthead header.masthead {
-    padding-top: calc(6rem + 106px);
-    padding-bottom: 6rem;
-  }
-  #masthead header.masthead h1 {
-    font-size: 4.75em;
-    line-height: 4rem;
-  }
-  #masthead header.masthead h2 {
-    font-size: 1.75em;
+@media screen and (min-width: 525px) {
+  #masthead #subhead {
+    font-size: 1.5em;
   }
 }
 
@@ -6142,6 +6131,12 @@ section h2 {
 #typed-header .sub-heading {
   color: #eee;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 1.25em;
+}
+@media screen and (min-width: 525px) {
+  #typed-header .sub-heading {
+    font-size: 1.85em;
+  }
 }
 
 .fade-out-background {
@@ -6191,13 +6186,17 @@ section h2 {
 #typed-header .final-header h1.communicate-font {
   font-weight: 700;
   font-family: "Montserrat";
-  font-size: 3.75em;
 }
 
 #typed-string, #final-string {
-  font-size: 3rem;
+  font-size: 1.75em;
   display: block;
   min-height: 60px;
+}
+@media screen and (min-width: 525px) {
+  #typed-string, #final-string {
+    font-size: 2.5em;
+  }
 }
 
 .typed-cursor {
@@ -6347,12 +6346,66 @@ form .row:first-child .floating-label-form-group {
 #about {
   background-image: url("../assets/about-img.jpg");
   background-size: cover;
-  background-attachment: fixed;
+}
+@media screen and (min-width: 768px) {
+  #about {
+    background-attachment: fixed;
+  }
 }
 #about .background-div {
   height: 100%;
   width: 100%;
   background-color: #1d21246e;
+}
+
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+  /* For text formatting. */
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static, #masthead .background-div {
+  background: #1d21246e;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg-1::after {
+  background-image: url("../assets/hero-original.jpg");
 }
 
 /*# sourceMappingURL=main.css.map */

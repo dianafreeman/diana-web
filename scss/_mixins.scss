@@ -23,3 +23,8 @@
     -1px 1px 0 $color,
      1px 1px 0 $color
 }
+
+
+.bg2::after {
+  background-image: url('https://placekitten.com/g/800/600');
+}

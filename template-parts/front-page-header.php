@@ -3,10 +3,9 @@
 ?>
 
 
-<header id="masthead" class="text-center">
-    <div class="background-div final-state">
-
-  <div id="typed-header">
+<header id="masthead">
+  <div class="background-div final-state">
+  <div id="typed-header" >
     <div class="final-header">
     <h3 class="mb-4 sub-heading">
       <span class="animated communicate-font">Coder.</span>
@@ -31,9 +30,10 @@
 
     <div id="animation-control">
       <a href="#" id="pause" class="btn btn-secondary">
+        <i class="fas fa-pause"></i>
         <span class="screen-reader-text">Pause</span>
       </a>
-      <a href="#" id="skip" class="btn btn-secondary"><span class="screen-reader-text">Skip</span></a>
+      <a href="#" id="skip" class="btn btn-secondary"><i class="fas fa-step-forward"></i><span class="screen-reader-text">Skip</span></a>
     </div>
   </div><!-- end typed headers --> 
       <h2 id="subhead" class="mt-4 mb-0 animated sub-heading">How can I help?</h2>
