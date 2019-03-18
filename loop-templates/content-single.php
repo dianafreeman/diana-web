@@ -14,7 +14,7 @@
 
 		<div class="entry-meta">
 
-			<?php understrap_posted_on(); ?>
+			<?php diana_simple_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
 
@@ -28,7 +28,7 @@
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'diana-simple' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -37,7 +37,7 @@
 
 	<footer class="entry-footer">
 
-		<?php understrap_entry_footer(); ?>
+		<?php diana_simple_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

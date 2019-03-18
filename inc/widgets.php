@@ -98,9 +98,9 @@ if ( ! function_exists( 'diana_simple_widgets_init' ) ) {
 	function diana_simple_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => __( 'Right Sidebar', 'understrap' ),
+				'name'          => __( 'Right Sidebar', 'diana-simple' ),
 				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area', 'understrap' ),
+				'description'   => __( 'Right sidebar widget area', 'diana-simple' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -110,9 +110,9 @@ if ( ! function_exists( 'diana_simple_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Left Sidebar', 'understrap' ),
+				'name'          => __( 'Left Sidebar', 'diana-simple' ),
 				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area', 'understrap' ),
+				'description'   => __( 'Left sidebar widget area', 'diana-simple' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -122,9 +122,9 @@ if ( ! function_exists( 'diana_simple_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Hero Slider', 'understrap' ),
+				'name'          => __( 'Hero Slider', 'diana-simple' ),
 				'id'            => 'hero',
-				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'understrap' ),
+				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'diana-simple' ),
 				'before_widget' => '<div class="carousel-item">',
 				'after_widget'  => '</div>',
 				'before_title'  => '',
@@ -134,9 +134,9 @@ if ( ! function_exists( 'diana_simple_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Hero Canvas', 'understrap' ),
+				'name'          => __( 'Hero Canvas', 'diana-simple' ),
 				'id'            => 'herocanvas',
-				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'understrap' ),
+				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'diana-simple' ),
 				'before_widget' => '',
 				'after_widget'  => '',
 				'before_title'  => '',
@@ -146,9 +146,9 @@ if ( ! function_exists( 'diana_simple_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Top Full', 'understrap' ),
+				'name'          => __( 'Top Full', 'diana-simple' ),
 				'id'            => 'statichero',
-				'description'   => __( 'Full top widget with dynamic grid', 'understrap' ),
+				'description'   => __( 'Full top widget with dynamic grid', 'diana-simple' ),
 				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .static-hero-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
@@ -158,9 +158,9 @@ if ( ! function_exists( 'diana_simple_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Full', 'understrap' ),
+				'name'          => __( 'Footer Full', 'diana-simple' ),
 				'id'            => 'footerfull',
-				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
+				'description'   => __( 'Full sized footer widget with dynamic grid', 'diana-simple' ),
 				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',

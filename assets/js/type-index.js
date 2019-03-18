@@ -77,7 +77,7 @@ $('#skip').click( function (){
 function revealfrontPage(){
 	 jQuery('#typed-header .final-header').css('opacity','1');
 	 jQuery('#typed-header .start-header').css('opacity','0');
-	 jQuery('#typed-string').text('Hi. I\'m Diana')
+	 jQuery('#typed-string').text('Hi. I\'m Diana');
 	 jQuery('#subhead').css('opacity', '1');
 	 destroyAnimationControls();
 

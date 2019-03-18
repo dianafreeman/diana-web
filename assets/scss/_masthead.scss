@@ -1,0 +1,142 @@
+#masthead.fixed {
+    @media screen and (min-width: 768px) {}
+}
+
+#masthead {
+    &:not(.page-masthead) {
+        background-image: url('../graphics/hero-original.jpg');
+        background-size: cover;
+        height: 80vh;
+        background-attachment: fixed !important;
+    }
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    padding-top: 130px;
+    width: 100%;
+    position: relative;
+    &.page-masthead {
+        min-height: 150px;
+        display: flex;
+        padding-top: 120px;
+    }
+    .background-div {
+        padding-top: 10em;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(0, 0, 0, .45);
+        &.final-state {
+            background-color: rgba(0, 0, 0, .45);
+        }
+    }
+    #subhead {
+        font-size: 20px;
+        font-weight: 500;
+        font-style: italic;
+        color: #eee;
+        @include text-shadow(black);
+        @media screen and (min-width: 525px) {
+            font-size: 1.5em;
+        }
+    }
+}
+
+#typed-header {
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+    .string-container {
+        padding: calc(20px + 1vw);
+        border-radius: 10px;
+        margin: 0 auto;
+        display: inline-flex;
+        min-height: 110px;
+        h1 {
+            @include text-shadow(#eee);
+            &.typed-font {
+                @include typed-font();
+            }
+        }
+    }
+    .sub-heading {
+        color: #eee;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        font-size: 1.25em;
+        @media screen and (min-width: 525px) {
+            font-size: 1.85em;
+        }
+    }
+}
+
+.fade-out-background {
+    animation-name: fadeToPrimary;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeToPrimary {
+    from {
+        background-color: none;
+    }
+    to {
+        background-color: #1d21246e;
+    }
+}
+
+.fade-in-background {
+    animation-name: fadeFromWhite;
+    animation-duration: 2s;
+}
+
+@keyframes fadeFromWhite {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: none;
+    }
+}
+
+.typed-font {
+    @include typed-font();
+}
+
+.creative-font {
+    @include creative-font();
+}
+
+.communicate-font {
+    @include heading-font(400);
+}
+
+#typed-header .final-header {
+    position: absolute;
+    width: inherit;
+    h1.communicate-font {
+        @include heading-font(700);
+    }
+}
+
+#typed-string,
+#final-string {
+    font-size: 1.75em;
+    display: block;
+    min-height: 60px;
+    @media screen and (min-width: 525px) {
+        font-size: 2.5em;
+    }
+}
+
+.typed-cursor {
+    font-size: 2rem;
+    display: flex;
+    color: #eee;
+    @include text-shadow(black);
+}
+
+#animation-control {
+    position: absolute;
+    right: 2em;
+    bottom: 1em;
+}

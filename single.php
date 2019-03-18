@@ -10,10 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'diana_simple_container_type' );
 ?>
 
-<div class="wrapper" id="single-wrapper">
+<div class="container" id="single-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -28,7 +28,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-					<?php understrap_post_nav(); ?>
+					<?php diana_simple_post_nav(); ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.

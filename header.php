@@ -9,21 +9,26 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly.
 }
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'diana_simple_container_type' );
+$construction = get_theme_mod( 'diana_simple_construction_mode' );
 ?>
 <!DOCTYPE html>
-<div class="bg-warning" style="position:fixed; height: fit-content; z-index: 99">
-<h2 class="text-center"> Heads Up -- This site is under construction. Some functionalities are disabled </h2>
-</div>
+
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <?php wp_head(); ?>
+  <?php if ($construction == true){ ?>
+<div class="bg-warning" style="position:fixed; height: fit-content; width: 100%; z-index: 99;">
+<p class="text-center" style="font-size: calc(12px + 1vw);"> Heads Up -- This site is under construction. Some functionalities are disabled </p>
+</div>
+
   <style>
-.fixed-top{ top: 75px !important; }
+.fixed-top{ top: 50px !important; }
 </style>
+<?php }; ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -33,33 +38,34 @@ $container = get_theme_mod( 'understrap_container_type' );
   <!-- ******************* The Navbar Area ******************* -->
   <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-    <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
+    <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'diana-simple' ); ?></a>
 
     <nav id="mainNav" class="navbar navbar-expand-md bg-dark fixed-top">
 
-    <?php if ( 'container' == $container ) : ?>
       <div class="container" >
-    <?php endif; ?>
 
           <!-- Your site title as branding in the menu -->
-          <?php if ( ! has_custom_logo() ) { ?>
+          <?php
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+          if ( has_custom_logo() ) { ?>
 
-            <?php if ( is_front_page() && is_home() ) : ?>
+
+<!            <img style="width: 30vw; max-width: 250px;" src="<?php echo esc_url( $logo[0] ) ?>" /> 
+     
+              <h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+
+            <?php } else { ?>
+
 
               <h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
 
-            <?php else : ?>
-
-              <a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
-            <?php endif; ?>
+            <?php } ?>
 
 
-          <?php } else {
-            the_custom_logo();
-          } ?><!-- end custom logo -->
+      
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'diana-simple' ); ?>">
           <span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x text-white"> </i></span>
         </button>
 
@@ -76,9 +82,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
           )
         ); ?>
-      <?php if ( 'container' == $container ) : ?>
       </div><!-- .container -->
-      <?php endif; ?>
 
     </nav><!-- .site-navigation -->
 

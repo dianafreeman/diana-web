@@ -1,0 +1,50 @@
+// Typography
+body, p {
+  @include body-font;
+  font-size: 17px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-font();
+}
+
+
+hr.icon-light:after,
+hr.icon-dark:after {
+  position: relative;
+  top: -.8em;
+  display: inline-block;
+  padding: 0 0.25em;
+  content: '\f0e0';
+  font-family: FontAwesome;
+  font-size: 2em;
+}
+
+hr.icon-light {
+  border-color: $light;
+  border-color: $light;
+  border-radius: 10px;
+  color: $light;
+}
+
+hr.icon-dark {
+  background-color: $dark;
+  border-color: $dark;
+  border-radius: 10px;
+  color: $light;
+}
+
+.wp-block-quote{
+  @extend .blockquote;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  padding: 1em;
+  background: $light;
+  border-left: $light-accent 15px solid;
+  border-radius: 10px;
+}

@@ -1,0 +1,42 @@
+#contact{
+  .img-container{
+  background-image: url('../graphics/connect.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+}
+
+// Section Padding Settings
+section {
+  .container{padding: 3rem 0;}
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
+  @media (min-width: 992px) {
+    h2 {
+      font-size: 3rem;
+      line-height: 2.5rem;
+    }
+  }
+}
+
+
+.section-title{
+  margin-bottom: 1em;
+}
+
+.lead-title{
+      font-weight: 300;
+    font-style: italic;
+}
+
+
+.service-item{
+  height: 300px;
+  .service-content{
+     height: 100%;
+    padding: 1em;
+    }   
+}

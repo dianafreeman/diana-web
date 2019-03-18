@@ -1,0 +1,42 @@
+#archive-wrapper{
+ article{
+  &:nth-child(4n+1) .bg-accent{
+     background-color: $accent-one;
+
+ }
+
+   &:nth-child(4n+2) .bg-accent{
+  background-color: $accent-two;
+
+ }
+
+   &:nth-child(4n+3) .bg-accent{
+  background-color: $accent-three;
+
+ }
+
+   &:nth-child(4n+4) .bg-accent{
+  background-color: $accent-four;
+
+ }
+}
+}
+
+
+.bg-accent-1{
+     background-color: $accent-one;
+
+ }
+
+.bg-accent-2{
+     background-color: $accent-two;
+
+ }
+ .bg-accent-3{
+     background-color: $accent-three;
+
+ }
+ .bg-accent-4{
+     background-color: $accent-four;
+
+ }

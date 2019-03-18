@@ -22,9 +22,9 @@ if ( ! function_exists( 'diana_simple_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'understrap' ),
-				'next_text'          => __( '&raquo;', 'understrap' ),
-				'screen_reader_text' => __( 'Posts navigation', 'understrap' ),
+				'prev_text'          => __( '&laquo;', 'diana-simple' ),
+				'next_text'          => __( '&raquo;', 'diana-simple' ),
+				'screen_reader_text' => __( 'Posts navigation', 'diana-simple' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 			)

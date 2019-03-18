@@ -29,21 +29,21 @@ if ( ! function_exists( 'diana_simple_add_site_info' ) ) {
 
 		$site_info = sprintf(
 			'<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s(%4$s)',
-			esc_url( __( 'http://wordpress.org/', 'understrap' ) ),
+			esc_url( __( 'http://wordpress.org/', 'diana-simple' ) ),
 			sprintf(
 				/* translators:*/
-				esc_html__( 'Proudly powered by %s', 'understrap' ),
+				esc_html__( 'Proudly powered by %s', 'diana-simple' ),
 				'WordPress'
 			),
 			sprintf( // WPCS: XSS ok.
 				/* translators:*/
-				esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ),
+				esc_html__( 'Theme: %1$s by %2$s.', 'diana-simple' ),
 				$the_theme->get( 'Name' ),
-				'<a href="' . esc_url( __( 'http://understrap.com', 'understrap' ) ) . '">understrap.com</a>'
+				'<a href="' . esc_url( __( 'http://understrap.com', 'diana-simple' ) ) . '">understrap.com</a>'
 			),
 			sprintf( // WPCS: XSS ok.
 				/* translators:*/
-				esc_html__( 'Version: %1$s', 'understrap' ),
+				esc_html__( 'Version: %1$s', 'diana-simple' ),
 				$the_theme->get( 'Version' )
 			)
 		);

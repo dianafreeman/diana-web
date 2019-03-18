@@ -22,6 +22,9 @@ $diana_theme_includes = array(
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
 	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',                          // Load Editor functions.
+	'/wp-taxonomies.php',                   // Load custom taxonomies
+	'/shortcodes.php',                   // Load custom taxonomies
+	'/hexToRgba.php'                   // Load custom color transforms
 );
 
 foreach ( $diana_theme_includes as $file ) {

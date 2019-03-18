@@ -1,22 +1,26 @@
 // Styling for the portfolio section
 #portfolio{
-
-}
-
-.portfolio {
   background-size: cover;
 
-  margin-bottom: -15px;
+    .background-image{
+      height: 100%;
+      background-repeat:no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+  .front-page-portfolio-item{
+    padding:unset !important;
+    .portfolio-item{
+      height: 100%;
+    }
+
+  }
   .portfolio-item {
     position: relative;
     display: block;
     max-width: 25rem;
     margin-bottom: 15px;
-    height: 200px;
-
-    .background-image{
-      height: 100%;
-    }
     .portfolio-item-caption {
       -webkit-transition: all ease 0.5s;
       -moz-transition: all ease 0.5s;
@@ -30,17 +34,27 @@
         font-size: 1.5rem;
       }
     }
+
   }
-  @media (min-width: 576px) {
-    margin-bottom: -30px;
-    .portfolio-item {
-      margin-bottom: 30px;
-    }
+
+  // OWL Carousel 
+  .owl-nav{
+    font-size: 3em;
+    position: relative;
   }
+  .owl-prev{
+      left: 0;
+    position: absolute;
+  }
+  .owl-next{
+     right: 0;
+    position: absolute;
+  }
+ 
 }
 
 .portfolio-modal {
-  .portfolio-modal-dialog {
+  .modal-dialog {
     padding: 3rem 1rem;
     min-height: calc(100vh - 2rem);
     margin: 1rem calc(1rem - 8px);
@@ -60,6 +74,9 @@
     h2 {
       font-size: 2rem;
     }
+  }
+  .modal-content{
+    border: none;
   }
   @media(min-width: 768px) {
     .portfolio-modal-dialog {

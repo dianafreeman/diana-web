@@ -16,11 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'diana_simple_container_type' );
 
 ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="container" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 

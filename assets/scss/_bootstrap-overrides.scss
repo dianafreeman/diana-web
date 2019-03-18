@@ -1,0 +1,45 @@
+// Bootstrap overrides for this template
+// $primary:	#cdd1d4;
+// $info:	#202f45;
+// $success:	#6aad6c;
+// $warning: 	#e89d34;
+// $danger:	#f44336;
+// $light: #FCFAFA;
+// $dark: #314251;
+$primary: #93a2b2; //Gull Gray
+$info: #353f4f; //Oxford Blue
+$success: #61ab6d; //Aqua Forest
+$warning: #df9b35; //Golden Grass
+$danger: #f44336; //Pomegranate
+$light: #F1F4F6; //Athens Gray
+$light-accent: #899097; // Oslo Gray
+$dark-accent: #7D8290; // Waterloo
+$dark: #353F4F; //Oxford Blue
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+;
+$enable-gradients: true;
+$accent-one: #F27B24;
+$accent-two: #CF2C44;
+$accent-three: #2E3D57;
+$accent-four: #A99D8B;
+// custom classes for functionality
+// refrenced frequently in 
+.hidden {
+    visibility: hidden;
+}
+
+.btn-secondary {
+    background: slategray !important;
+}
+
+// Custom Rounded Social Button
+.btn-social {
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}

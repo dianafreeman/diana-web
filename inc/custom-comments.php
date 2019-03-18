@@ -39,7 +39,7 @@ if ( ! function_exists( 'diana_simple_bootstrap_comment_form_fields' ) ) {
 					'understrap' ) . '</label> ' .
 			            '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"></div>',
 			'cookies' => '<div class="form-group form-check comment-form-cookies-consent"><input class="form-check-input" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' /> ' .
-			         '<label class="form-check-label" for="wp-comment-cookies-consent">' . __( 'Save my name, email, and website in this browser for the next time I comment', 'understrap' ) . '</label></div>',
+			         '<label class="form-check-label" for="wp-comment-cookies-consent">' . __( 'Save my name, email, and website in this browser for the next time I comment', 'diana-simple' ) . '</label></div>',
 		);
 
 		return $fields;
@@ -60,7 +60,7 @@ if ( ! function_exists( 'diana_simple_bootstrap_comment_form' ) ) {
 
 	function diana_simple_bootstrap_comment_form( $args ) {
 		$args['comment_field'] = '<div class="form-group comment-form-comment">
-	    <label for="comment">' . _x( 'Comment', 'noun', 'understrap' ) . ( ' <span class="required">*</span>' ) . '</label>
+	    <label for="comment">' . _x( 'Comment', 'noun', 'diana-simple' ) . ( ' <span class="required">*</span>' ) . '</label>
 	    <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="8"></textarea>
 	    </div>';
 		$args['class_submit']  = 'btn btn-secondary'; // since WP 4.1.

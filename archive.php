@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'diana_simple_container_type' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
@@ -25,7 +25,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -57,10 +56,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php endif; ?>
 
-			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+			<?php diana_simple_pagination(); ?>
 
 			<!-- Do the right sidebar check -->
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

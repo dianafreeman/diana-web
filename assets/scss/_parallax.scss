@@ -1,0 +1,44 @@
+.parallax {
+ perspective: 5px;
+    height: 170vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &.front-page-section{
+      height: 80vh;
+    }
+}
+
+.parallax__layer {
+    position: absolute;
+    top: -90px;
+    right: 0;
+    bottom: -90px;
+    left: 0;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
+
+  .bg-parallax{
+    background-size: 75vw;
+    background-position-y: -15vh;
+    background-position-x: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+.bg-parralax-grad{
+background: rgb(96,142,169);
+background: -moz-linear-gradient(30deg, rgba(96,142,169,1) 0%, rgba(236,243,249,1) 56%, rgba(118,158,182,1) 100%);
+background: -webkit-linear-gradient(30deg, rgba(96,142,169,1) 0%, rgba(236,243,249,1) 56%, rgba(118,158,182,1) 100%);
+background: linear-gradient(30deg, rgba(96,142,169,1) 0%, rgba(236,243,249,1) 56%, rgba(118,158,182,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#608ea9",endColorstr="#769eb6",GradientType=1);
+  }
+
+
+

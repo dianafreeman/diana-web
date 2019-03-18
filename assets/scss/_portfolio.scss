@@ -1,0 +1,86 @@
+#portfolio {
+    overflow: hidden;
+    .portfolio-container {
+        height: 100%;
+    }
+    .front-page-portfolio-item {
+        .card-footer {
+            display: block;
+        }
+        @media screen and (min-width: 776px) {
+            width: 30vw;
+        }
+    }
+    .slick-slide {
+        width: 300px;
+        transition: width .5s ease-in-out;
+    }
+    .portfolio-item {
+        height: 100%;
+        display: block;
+    }
+    .project {
+        .card-image {
+            height: 100%;
+            background-size: cover;
+        }
+    }
+    .portfolio-carousel {
+        width: calc(100% + 30px);
+        position: relative;
+        left: -15px;
+        height: 360px;
+        overflow: hidden;
+    }
+    .card {
+        height: 400px;
+        max-height: 60vh;
+        border: none;
+        &-body,
+        &-image {
+            height: 100%;
+        }
+        .card-overlay {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 0;
+        }
+        .card-title {
+            @extend .display-4;
+            font-size: 28px !important;
+            text-align: left;
+        }
+        .card-footer {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            background-color: $dark-accent;
+            text-align: center;
+            display: none;
+        }
+        .card-image {
+            background-size: contain;
+            background-position: top;
+            background-repeat: no-repeat;
+            background-color: $gray-800;
+        }
+        .card-overlay {}
+    }
+    .slick-prev {
+        left: 0;
+    }
+    .slick-next {
+        right: 0;
+    }
+    .slick-next,
+    .slick-prev {
+        z-index: 1;
+        &::before {
+            font-size: 40px;
+        }
+        width: 40px;
+        height: 40px;
+    }
+}
