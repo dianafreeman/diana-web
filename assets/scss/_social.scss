@@ -1,0 +1,96 @@
+$facebook:#3b5998;
+$twitter:#55acee;
+$linkedin: #007bb5;
+$medium: #3cb371;
+$github: #000000;
+@mixin social-icon($platform) {
+    min-width: 40px;
+    min-height: 30px;
+    border: 1px solid $dark-accent;
+    border-radius: 100%;
+    padding: 15px;
+    .fa,
+    .fab {
+        color: $dark-accent;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $platform;
+        border-color: white;
+        .fa,
+        .fab {
+            color: white;
+        }
+    }
+}
+
+@mixin solid-social-icon($platform) {
+    min-width: 40px;
+    min-height: 30px;
+    border: 1px solid $platform;
+    background-color: $platform;
+    border-radius: 100%;
+    padding: 15px;
+    .fa,
+    .fab {
+        color: white;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken($platform, 10%);
+        border-color: white;
+        .fa,
+        .fab {
+            color: white;
+        }
+    }
+}
+
+.social i::before {
+    font-size: 20px;
+}
+
+.social-link-fb {
+    @include social-icon($facebook);
+    &.solid {
+        @include solid-social-icon($facebook);
+    }
+}
+
+.social-link-twitter {
+    @include social-icon($twitter);
+    &.solid {
+        @include solid-social-icon($twitter);
+    }
+}
+
+.social-link-linkedin {
+    @include social-icon($linkedin);
+    &.solid {
+        @include solid-social-icon($linkedin);
+    }
+}
+
+.social-link-medium {
+    @include social-icon($medium);
+    &.solid {
+        @include solid-social-icon($medium);
+    }
+}
+
+.social-link-github {
+    @include social-icon($github);
+    &.solid {
+        @include solid-social-icon($github);
+    }
+}
+
+.social {
+    display: block;
+    height: 120px;
+    a {
+        display: inline-block;
+    }
+}

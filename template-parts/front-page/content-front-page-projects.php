@@ -8,13 +8,23 @@ global $post;
 $size = 300;
 $project_color = get_field('project_color');
 $project_overlay = hex2rgba($project_color, 0.5);
-?>
-<!-- Card -->
-<div class="card project">
-  <div class="card-overlay" style="background-color: <?php echo esc_attr($project_overlay) ;?>;"> </div>
-     <a class="portfolio-item"  style="background-color: <?php echo esc_attr($project_overlay) ;?>;">
+$isfront = is_front_page();
+$classes = 'card project';
+if (is_front_page()){
+  $classes = $classes. ' front-page-portfolio-item';
+}
+$featuredImageURL = get_the_post_thumbnail_url( get_the_ID(), 'large');
 
-  <div class="card-image" style="background-image: url(<?php echo esc_url(get_the_post_thumbnail_url( $post, $size ));?>)">
+?>
+
+<!-- Card -->
+<div class="<?php echo esc_attr($classes) ?>" >
+  <div class="card-overlay" > </div>
+  <div class="project-color-overlay" style="background-color: <?php echo esc_attr($project_overlay) ;?>"> </div>
+
+     <a class="portfolio-item" >
+
+  <div class="card-image" style="background-image: url(<?php echo esc_url($featuredImageURL) ;?>)">
   </div>
   <!-- Content -->
     <div class="card-body text-white text-center">

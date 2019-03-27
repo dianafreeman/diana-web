@@ -25,7 +25,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+						<?php get_template_part( 'template-parts/content/content', 'page' ); ?>
 
 						<?php
 						// If comments are open or we have at least one comment, load up the comment template.
@@ -40,7 +40,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 			</div><!-- #primary -->
 
-			<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+			<?php get_template_part( 'template-parts/sidebar/sidebar', 'right' ); ?>
 
 		</div><!-- .row -->
 

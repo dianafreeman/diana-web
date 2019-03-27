@@ -3,18 +3,18 @@
     AOS.init();
 
 
-
     // Scroll to top button appear
     $(document).scroll(function() {
         var scrollDistance = $(this).scrollTop();
         if (scrollDistance > 100) {
             $('.scroll-to-top').fadeIn();
-            // $('#masthead:not(.page-masthead)').addClass('fixed');
         } else {
             $('.scroll-to-top').fadeOut();
 
         }
     });
+
+
 
     // Closes responsive menu when a scroll trigger link is clicked
     $('.js-scroll-trigger').click(function() {
@@ -55,7 +55,10 @@
         });
     });
 
+
     $(function() {
+        $('#masthead.crossfade').addClass('final');
+        console.log('loaded!');
         $('.portfolio-carousel').slick({
             dots: true,
             infinite: true,
@@ -63,27 +66,23 @@
             adaptiveHeight: true,
             variableWidth: true,
             centerMode: false,
+            edgeFriction: 0,
             responsive: [{
                     breakpoint: 768,
                     settings: {
-                        arrows: true,
-                        centerMode: true,
+                        arrows: true
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
-                        arrows: false,
-                        centerMode: true,
+                        arrows: true
                     }
                 }
             ]
         });
 
-        $('.portfolio-carousel').slick().
-
-
-        $('.slick-slider').on('mouseover', '.slick-slide', activateSlide(event));
+        // $('.slick-slide').on('mouseover', activateSlide(event));
 
         function activateSlide(e) {
             return function(e) {
@@ -94,10 +93,25 @@
                 }
 
 
-            }
+            };
         }
 
-    }); // end on load
 
+        var slideTimer;
+        $('.portfolio-carousel').on('mouseenter', '.slick-slide', function(e) {
+            var $currTarget = $(e.currentTarget);
+            $('.portfolio-carousel .slick-slide').removeClass('slick-current');
+            $currTarget.addClass('slick-current');
+
+            slideTimer = setTimeout(function() {
+                var index = $('.portfolio-carousel').find('.slick-current').data('slick-index');
+                var slickObj = $('.portfolio-carousel').slick('getSlick');
+                slickObj.slickGoTo(index);
+            }, 500);
+        }).on('mouseleave', '.slick-slide', function(e) {
+            clearTimeout(slideTimer);
+        });
+
+    }); // end on load
 
 })(jQuery); // End of use strict

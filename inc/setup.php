@@ -128,10 +128,15 @@ if ( ! function_exists( 'diana_simple_all_excerpts_get_more_link' ) ) {
 	 * @return string
 	 */
 	function diana_simple_all_excerpts_get_more_link( $post_excerpt ) {
-		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
-			'understrap' ) . '</a></p>';
-		}
+		// if ( ! is_admin() ) {
+			// if (get_the_category() === 'testimonials'){
+				$post_excerpt = $post_excerpt;
+			// } else {
+				// $post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
+				// 'understrap' ) . '</a></p>';
+
+			// }
+		// }
 		return $post_excerpt;
 	}
 }

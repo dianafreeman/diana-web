@@ -29,14 +29,32 @@ This theme was built using Understrap (by Underscores/Autommatic). Recommended i
 
 Patterns by: https://www.heropatterns.com/
 
-#### To Do
 
-- Projects
 
-  - [x] Create Modal Preview for each project
-  - [ ] 
+#### To Do (prioritized)
 
-  Shortcodes
+1. Home Page
+2. About Page
+3. Projects Page
+   1. Add images to project
+   2. Create "project-single"
+4. Contact Page
+   - Social Media
+   - Contact Form
+
+
+
+#### Theme Organization (prioritized)
+
+1. Re organize theme 
+
+
+
+#### To Do (OLD)
+
+- Shortcodes
+
+  
 
 - Custom Fields
 
@@ -44,29 +62,28 @@ Patterns by: https://www.heropatterns.com/
     - [x] Project Color
     - [ ] Project Stack
   - About
-    - About Sections
-
-- Page Templates
-
-  - [ ] Gallery 
-  - [ ] Blog
-  - [ ] 
+    - 
 
 - Styling
 
   - [x] Quote Boxes
-  - [x] Gradient Background for each project
   - [ ] Logos for each stack
 
 - Shortcodes
 
   - social icons
-  - endorsements
+    - linkedin
+    - twitter
+    - medium
+    - 
+  - badges
+    - godaddy pro
+    - github pro
+    - 
+  - Certifications
+    - Data Supervisor? 
 
-- Portfolio
-
-  - create portfolio page
-  - full screen
+ 
 
 - Theme Customization
 

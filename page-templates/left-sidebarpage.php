@@ -17,7 +17,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 		<div class="row">
 
-			<?php get_template_part( 'sidebar-templates/sidebar', 'left' ); ?>
+			<?php get_template_part( 'template-parts/sidebar/sidebar', 'left' ); ?>
 
 			<div
 				class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
@@ -27,7 +27,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+						<?php get_template_part( 'template-parts/content/content', 'page' ); ?>
 
 						<?php
 						// If comments are open or we have at least one comment, load up the comment template.

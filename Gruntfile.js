@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         jshint: {
-            files: ['Gruntfile.js', 'assets/js/type-index.js', 'assets/js/main.js'],
+            files: ['Gruntfile.js', 'assets/js/typedHomePage.js', 'assets/js/typedPage.js', 'assets/js/main.js'],
             options: {
                 globals: {
                     jQuery: true
@@ -27,7 +27,11 @@ module.exports = function(grunt) {
             },
             my_target: {
                 files: {
-                    'assets/js/main.min.js': ['assets/js/main.js']
+                    'assets/js/main.min.js': ['assets/js/main.js'],
+                    'assets/js/typedHomePage.min.js': ['assets/js/typedHomePage.js'],
+                    'assets/js/typedPage.min.js': ['assets/js/typedPage.js'],
+
+
                 }
             }
         },
@@ -54,7 +58,7 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: ['assets/js/type-index.js', 'assets/js/main.js'],
-                tasks: ['jshint']
+                tasks: ['jshint', 'uglify']
 
             }
         }
@@ -62,6 +66,7 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-postcss');

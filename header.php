@@ -42,7 +42,7 @@ $construction = get_theme_mod( 'diana_simple_construction_mode' );
 
     <nav id="mainNav" class="navbar navbar-expand-md bg-dark fixed-top">
 
-      <div class="container" >
+      <div class="container-fluid" >
 
           <!-- Your site title as branding in the menu -->
           <?php
@@ -50,10 +50,12 @@ $construction = get_theme_mod( 'diana_simple_construction_mode' );
             $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
           if ( has_custom_logo() ) { ?>
 
-
-<!            <img style="width: 30vw; max-width: 250px;" src="<?php echo esc_url( $logo[0] ) ?>" /> 
      
-              <h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+              <a class="navbar-brand mb-0 ml-3" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+              <span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span>
+              <div class="logo-div">
+              </div>
+            </a>
 
             <?php } else { ?>
 
@@ -90,8 +92,6 @@ $construction = get_theme_mod( 'diana_simple_construction_mode' );
 
     <!-- Header -->
     <?php if (!is_front_page()): 
-
-      get_template_part('template-parts/page','header');
-      endif;
-            ?>
+     // get_template_part('template-parts/header/header-page');
+      endif; ?>
     

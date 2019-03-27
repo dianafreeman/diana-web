@@ -12,10 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- #closing the primary container from /global-templates/left-sidebar-check.php -->
 
-<?php $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' ); ?>
+<?php $sidebar_pos = get_theme_mod( 'diana_simple_sidebar_positio' ); ?>
 
 <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 
-	<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+	<?php get_template_part( 'template-parts/sidebar/sidebar', 'right' ); ?>
 
 <?php endif; ?>

@@ -1,68 +1,29 @@
-#contact{
-  &:after{
- background-image: url('../graphics/connect.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 50%;
-  height: 100%;
-  }
-  .img-container{
- 
-}
-}
-
-// Styling for the contact section
-.floating-label-form-group , .wpcf7-form-control{
-  position: relative;
-  border-bottom: 1px solid $gray-200;
-  input,
-  textarea {
-    font-size: 1.5em;
-    position: relative;
-    z-index: 1;
-    padding-right: 0;
-    padding-left: 0;
-    resize: none;
-    border: none;
-    border-radius: 0;
-    background: none;
-    box-shadow: none !important;
-  }
-  label {
-    font-size: 0.85em;
-    line-height: 1.764705882em;
-    position: relative;
-    z-index: 0;
-    top: 2em;
-    display: block;
-    margin: 0;
-    -webkit-transition: top 0.3s ease, opacity 0.3s ease;
-    -moz-transition: top 0.3s ease, opacity 0.3s ease;
-    -ms-transition: top 0.3s ease, opacity 0.3s ease;
-    transition: top 0.3s ease, opacity 0.3s ease;
-    vertical-align: middle;
-    vertical-align: baseline;
-    opacity: 0;
-  }
-  &:not(:first-child) {
-    padding-left: 14px;
-    border-left: 1px solid $gray-200;
-  }
-}
-
-.floating-label-form-group-with-value, .wpcf7-form-control {
-  label {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-.floating-label-form-group-with-focus,{
-  label {
-    color: $primary;
-  }
-}
-form .row:first-child .floating-label-form-group {
-  border-top: 1px solid $gray-200;
+.wpcf7-form {
+    p {
+        color: white;
+    }
+    label {
+        width: 100%;
+    }
+    input:not(.wpcf7-submit),
+    textarea {
+        width: 100%;
+        border-radius: 5px;
+        padding-left: 30px;
+        padding: 5px;
+        border: none;
+        outline: none;
+        color: $primary;
+        &:focus {
+            box-shadow: 4px 5px 20px black;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        &:active {
+            border: 1px solid $primary;
+        }
+    }
+    .wpcf7-submit {
+        @extend .btn;
+        @extend .btn-success;
+    }
 }

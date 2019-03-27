@@ -84,7 +84,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 					<?php else : ?>
 
-						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+						<?php get_template_part( 'template-parts/content/content', 'none' ); ?>
 
 					<?php endif; ?>
 

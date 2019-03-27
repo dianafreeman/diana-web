@@ -34,11 +34,23 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 <?php endif; ?>
 
-<div class="bg-dark" id="wrapper-footer">
+<div class="bg-secondary" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
+<div class="row">
+	<div class="col-md-4 text-center">
+	<?php echo do_shortcode('[footer-social]') ;?>
+	</div>
+	<div class="col-md-4 text-center">
 
-		<div class="row">
+</div>
+
+<div class="col-md-4 text-center">
+
+</div>
+
+</div>
+		<div class="row bg-dark-accent">
 
 			<div class="col-md-12 text-center ">
 

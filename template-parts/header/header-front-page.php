@@ -3,7 +3,8 @@
 ?>
 
 
-<header id="masthead">
+<section id="front-page-header" class="front-page-section text-center">
+  <header id="masthead" style="background-image: url(<?php echo esc_url(get_stylesheet_directory_uri().'/assets/graphics/hero-original.jpg'); ?>">
   <div class="background-div final-state">
   <div id="typed-header" >
     <div class="final-header">
@@ -41,3 +42,5 @@
   </div><!-- end background div --> 
 
 </header>
+
+</section>

@@ -1,30 +1,74 @@
 @mixin body-font() {
-  font-family: 'Lato';
+    font-family: 'Lato';
 }
 
 @mixin heading-font($font-weight: 700) {
-  font-weight: $font-weight;
-  font-family: 'Montserrat';
+    font-weight: $font-weight;
+    font-family: 'Montserrat';
 }
 
-@mixin typed-font(){
-  font-weight: 400;
-  font-family: 'Space Mono', monospace;
+@mixin typed-font() {
+    font-weight: 400;
+    font-family: 'Space Mono', monospace;
 }
 
-@mixin creative-font(){
-	font-family: 'Playball', cursive;
+@mixin creative-font() {
+    font-family: 'Playball', cursive;
 }
 
-@mixin text-shadow($color: black){
-	   text-shadow:
-   -1px -1px 0 $color,
-    1px -1px 0 $color,
-    -1px 1px 0 $color,
-     1px 1px 0 $color
+@mixin text-shadow($color: black) {
+    text-shadow: -1px -1px 0 $color, 1px -1px 0 $color, -1px 1px 0 $color, 1px 1px 0 $color
 }
-
 
 .bg2::after {
-  background-image: url('https://placekitten.com/g/800/600');
+    background-image: url('https://placekitten.com/g/800/600');
+}
+
+@mixin overlay() {
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    left: 0;
+    top: 0;
+}
+
+
+/* Underline Reveal */
+
+@mixin hvr-underline-reveal() {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $light-accent;
+        height: 4px;
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        &::before {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
 }

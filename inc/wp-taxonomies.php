@@ -4,7 +4,7 @@
  *These allow the theme to attach "stacks"/technologies to any post
 */
 function diana_simple_create_custom_taxonomy() {
-	register_taxonomy('technologies', array( 'post' ), array(
+	register_taxonomy('technologies', array( 'projects' ), array(
 		'show_in_rest' => true,
 		'hierarchical' => false,
 		'labels' => array(
@@ -15,7 +15,7 @@ function diana_simple_create_custom_taxonomy() {
 			'edit_item' => __( 'Edit Technologies' ),
 			'update_item' => __( 'Update Technology' ),
 			'add_new_item' => __( 'Add new Technology' ),
-			'new_item_name' => __( 'New platform name' ),
+			'new_item_name' => __( 'New Technology name' ),
 		),
 		// Control the slugs used for this taxonomy
 		'rewrite' => array(
@@ -32,7 +32,7 @@ add_action( 'init', 'diana_simple_create_custom_taxonomy', 0 );
 
 function diana_simple_register_taxonomies(){
 
-register_taxonomy_for_object_type('post_tag', 'pg_apps'); 
+register_taxonomy_for_object_type('technologies', 'projects'); 
 
 };
 

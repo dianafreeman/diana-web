@@ -23,6 +23,7 @@ $diana_theme_includes = array(
 	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',                          // Load Editor functions.
 	'/wp-taxonomies.php',                   // Load custom taxonomies
+	'/wp-posttypes.php',                   // Load custom posts
 	'/shortcodes.php',                   // Load custom taxonomies
 	'/hexToRgba.php'                   // Load custom color transforms
 );

@@ -2,7 +2,7 @@
 // The Template for displaying the portfolio section
 ?>
 <!-- Portfolio Grid Section -->
-<div class="container-fluid"> 
+<div class="container-fluid mt-4 mb-4"> 
       <h2 class="display-3 text-light">Projects</h2>
 
       <div class="portfolio-container">
@@ -11,8 +11,7 @@
 
       <?php 
       $args = array(
-        'post_type'=> 'post',
-        'category_name' => 'projects'
+        'post_type'=> 'projects'
 
       );
       
@@ -20,18 +19,13 @@
       if ( $projects->have_posts() ) :
        while ( $projects->have_posts() ) : 
         $projects->the_post(); 
-        $the_post_id = $projects->the_ID();
-        $featuredImageURL = get_the_post_thumbnail_url( $projects->the_ID(), 'full');
-        $project_color = get_field('project_color');
-
+       
         ?>
         
-        <div class="front-page-portfolio-item">
 
-          <?php get_template_part('loop-templates/content','projects');?>
+          <?php get_template_part('template-parts/front-page/content-front-page','projects');?>
 
 
-      </div><!-- end portfolio item-->
 
     <?php     endwhile; else : ?>
     <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>

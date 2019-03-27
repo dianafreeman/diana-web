@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Resume Page
+ * Template Name: About Page
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -15,85 +15,115 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-get_header();
+// get_header('about');
 
-$container = get_theme_mod( 'diana_simple_container_type' );
+$bio_image = get_field( 'bio_image' );
+ get_template_part('template-parts/header/header-about');
+
 ?>
+<div class="wrapper bg-primary" id="index-wrapper ">
+    <div id="about" tabindex="-1">
+        <div class="row">
+            <?php if ( have_posts() ) : ?>
+            <?php /* Start the Loop */ ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+            <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+                <div class="page-section container-fluid">
+                    <div class="container">
+                        <div class="row pb-4">
+                            <div class="col-md-6 text-light">
+                                <h1 class="mb-4"> Hello There!</h1>
 
-<?php if ( is_front_page() && is_home() ) : ?>
-<?php get_template_part( 'global-templates/hero' ); ?>
-<?php endif; ?>
+                                <h2 class="mt-2">I'm Diana.</h2>
+                                <p class="lead"> A researcher by training, and a coder by trade; I’m on a mission to
+                                    turn
+                                    the the tools of tomorrow into more responsible tech, today. </p>
 
-<div class="wrapper" id="index-wrapper">
+                                <p class="lead">
+                                    For almost a decade, I've served individuals and organizations with comprehensive
+                                    web services, ranging from technical mentorship, graphic and brand design, domain
+                                    configuration, system automation, and web development.
+                                </p>
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+                            </div>
+                            <div class="col-sm-6 mx-auto text-center">
+                                <a class="btn-group-light btn-group" target="_blank"
+                                    href="<?php echo esc_url('https://drive.google.com/file/d/16As1shTO3tHK8GbnyNKCwtxLmpK68YLD/view?usp=sharing') ?>">
+                                    <span class="btn about-btn"><i class="fas fa-code px-2"></i></span>
+                                    <span class="btn about-btn">Download my Resumé</span>
+                                </a>
+                                <!-- <div class="btn-group-light btn-group">
+                                <span class="btn about-btn"><i class="fas fa-graduation-cap px-2"></i></span>
+                                <a class="btn about-btn">Download my CV</a>
+                            </div> -->
 
-		<div class="row">
+                            </div> <!-- end row-->
+                        </div><!-- end content container-->
+                    </div> <!-- end page-section -->
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+                    <div class="page-section bg-light container-fluid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h1 class="text-center mb-4"> Industry Experience </h1>
 
-			<main class="site-main" id="main">
+                                    <?php get_template_part('template-parts/prof-timeline'); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-				<?php if ( have_posts() ) : ?>
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-						<article <?php post_class(); ?>  id="post-<?php the_ID(); ?>">
-							<header class="entry-header">
 
-								<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                    <div id="testimonials" class="page-section container-fluid pb-4 ">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1 class="text-center text-light mb-4"> Testimonials </h1>
 
-							</header><!-- .entry-header -->
+                            </div>
+                        </div>
+                        <div class="container">
+                        <div class="testimonial-carousel row">
 
-							<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                            <?php
+								$args = array(
+										'post_type'=> 'post',
+										'category_name' => 'testimonials'
 
-							<div class="entry-content">
+									);
+									
+									$tests = new WP_Query($args);
+                                    if ( $tests->have_posts() ) :
+                                        while ( $tests->have_posts() ) : 
+										$tests->the_post(); 
+                                        get_template_part('template-parts/content/content','testimonial');
 
-								<?php the_content(); ?>
+								endwhile;
+							endif;
 
-								<?php
-								wp_link_pages( array(
-									'before' => '<div class="page-links">' . __( 'Pages:', 'diana-simple' ),
-									'after'  => '</div>',
-								) );
 								?>
-
-							</div><!-- .entry-content -->
-
-
-
-
-							<div class="about-section">
-								
-						
-							</div>
-							<footer class="entry-footer">
-								<?php edit_post_link( __( 'Edit', 'diana-simple' ), '<span class="edit-link">', '</span>' ); ?>
-
-							</footer><!-- .entry-footer -->
-						</article><!-- #post-## -->
+                        </div>
+                    </div>
+                    </div><!-- end container--> 
+                    <!-- <div class="page-section container-fluid bg-light">
+                    <div class="row">
+                        <div class="col-sm-6 mx-auto">
+                            <h1 class="text-uppercase">Tech</h1>
 
 
-					<?php endwhile; ?>
+                        </div>
 
-					<?php else : ?>
+                    </div> row  -->
+                    <!-- </div> end page section -->
+            </article><!-- #post-## -->
+            <?php endwhile; ?>
+            <?php else : ?>
+            <?php get_template_part( 'template-parts/content/content', 'none' ); ?>
 
-						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+            <?php endif; ?>
+        </div> <!-- end row-->
 
-					<?php endif; ?>
-
-				</main><!-- #main -->
-
-				<!-- The pagination component -->
-				<?php diana_simple_pagination(); ?>
-
-				<!-- Do the right sidebar check -->
-				<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-			</div><!-- .row -->
-
-		</div><!-- #content -->
-
-	</div><!-- #index-wrapper -->
-
-	<?php get_footer(); ?>
+        <!-- The pagination component -->
+        <?php diana_simple_pagination(); ?>
+    </div><!-- .row -->
+</div><!-- #index-wrapper -->
+<?php get_footer(); ?>

@@ -1,5 +1,5 @@
 <?php
-// shortcodes for use in diana-simple
+
 
 // Go Daddy Badge
 function badge_shortcode($atts) {
@@ -25,4 +25,34 @@ function badge_shortcode($atts) {
     }
 }
 add_shortcode('badge', 'badge_shortcode');
+
+
+function footer_social_icons_shortcode(){
+    return '<h4 class="text-uppercase mb-4">On the Web</h4>
+    <ul class="list-inline mb-0">
+      <li class="list-inline-item">
+        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+          <i class="fab fa-fw fa-twitter"></i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+          <i class="fab fa-fw fa-linkedin"></i>
+        </a>
+      </li>
+       <li class="list-inline-item">
+        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+          <i class="fab fa-fw fa-medium"></i>
+        </a>
+      </li>
+       </li>
+       <li class="list-inline-item">
+        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+          <i class="fab fa-fw fa-git"></i>
+        </a>
+      </li>
+    </ul>';
+} 
+add_shortcode('footer-social', 'footer_social_icons_shortcode');
+
 ?>

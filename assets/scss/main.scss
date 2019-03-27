@@ -1,42 +1,30 @@
 @import "bootstrap-overrides.scss";
-
-
 /// Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
+// Mine
 @import "category.scss";
 @import "front-page.scss";
-@import "portfolio.scss";
-
 @import "contact.scss";
-
-// Mine
 @import "mixins.scss";
 @import "global.scss";
 @import "sections.scss";
 @import "navbar.scss";
 @import "masthead.scss";
 @import "footer.scss";
+@import "portfolio.scss";
 @import "parallax.scss";
 @import "about.scss";
+@import "social.scss";
+@import "archives.scss";
 @import "wp-overrides.scss";
-
-
-.btn-xl{
-  padding: 1em;
+.btn-xl {
+    padding: 1em;
 }
 
-.btn-full{
-  width: 100% !important
+.btn-full {
+    width: 100% !important
 }
 
-
-.bottom-right-header{
-float: left;
+.bottom-right-header {
+    float: left;
 }
-
-.entry-title{
-	    position: absolute;
-    bottom: 1em;
-}
-

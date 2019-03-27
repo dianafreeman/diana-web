@@ -6,7 +6,7 @@
 // $danger:	#f44336;
 // $light: #FCFAFA;
 // $dark: #314251;
-$primary: #93a2b2; //Gull Gray
+$primary:#2E3D57;
 $info: #353f4f; //Oxford Blue
 $success: #61ab6d; //Aqua Forest
 $warning: #df9b35; //Golden Grass
@@ -20,8 +20,7 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
-;
-$enable-gradients: true;
+$enable-gradients: false;
 $accent-one: #F27B24;
 $accent-two: #CF2C44;
 $accent-three: #2E3D57;
@@ -30,16 +29,4 @@ $accent-four: #A99D8B;
 // refrenced frequently in 
 .hidden {
     visibility: hidden;
-}
-
-.btn-secondary {
-    background: slategray !important;
-}
-
-// Custom Rounded Social Button
-.btn-social {
-    width: 3.25rem;
-    height: 3.25rem;
-    font-size: 1.25rem;
-    line-height: 2rem;
 }
