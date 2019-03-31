@@ -42,7 +42,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 					<?php endwhile; // end of the loop. ?>
 
-				</main><!-- #main -->
+				</div><!-- #main -->
 
 			</div><!-- #primary -->
 

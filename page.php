@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container = get_theme_mod( 'diana_simple_container_type' );
+$container = get_field( 'container_type' );
 get_template_part('template-parts/header/header','page')
 
 ?>
@@ -29,7 +29,7 @@ get_template_part('template-parts/header/header','page')
         <!-- Do the left sidebar check -->
         <?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-        <main class="site-main" id="main">
+        <div class="site-main">
 
             <?php while ( have_posts() ) : the_post(); ?>
 
@@ -44,7 +44,7 @@ get_template_part('template-parts/header/header','page')
 
             <?php endwhile; // end of the loop. ?>
 
-        </main><!-- #main -->
+        </div><!-- #main -->
 
         <!-- Do the right sidebar check -->
         <?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

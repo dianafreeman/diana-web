@@ -18,6 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 // get_header('about');
 
 $bio_image = get_field( 'bio_image' );
+$resume_link = get_field('resume_link');
+$cv_link = get_field('cv_link');
+
  get_template_part('template-parts/header/header-about');
 
 ?>
@@ -27,34 +30,33 @@ $bio_image = get_field( 'bio_image' );
             <?php /* Start the Loop */ ?>
             <?php while ( have_posts() ) : the_post(); ?>
             <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-                <div class="page-section container-fluid">
+                <div class="page-section">
                     <div class="container">
                         <div class="row pb-4">
                             <div class="col-md-6 text-light">
-                                <h1 class="mb-4"> Hello There!</h1>
-
-                                <h2 class="mt-2">I'm Diana.</h2>
-                                <p class="lead"> A researcher by training, and a coder by trade; I’m on a mission to
-                                    turn
-                                    the the tools of tomorrow into more responsible tech, today. </p>
-
-                                <p class="lead">
-                                    For almost a decade, I've served individuals and organizations with comprehensive
-                                    web services, ranging from technical mentorship, graphic and brand design, domain
-                                    configuration, system automation, and web development.
-                                </p>
+                               <?php the_content(); ?> 
 
                             </div>
-                            <div class="col-sm-6 mx-auto text-center">
-                                <a class="btn-group-light btn-group" target="_blank"
-                                    href="<?php echo esc_url('https://drive.google.com/file/d/16As1shTO3tHK8GbnyNKCwtxLmpK68YLD/view?usp=sharing') ?>">
+                            <div class="col-md-6 mx-auto text-center">
+                                <?php if ($resume_link){?>
+                                    <div class="col-sm-12" >
+                                    <a role="button" tabindex="0" class="btn-group-light btn-group" target="_blank"
+                                    href="<?php echo esc_url($resume_link) ?>">
                                     <span class="btn about-btn"><i class="fas fa-code px-2"></i></span>
                                     <span class="btn about-btn">Download my Resumé</span>
                                 </a>
-                                <!-- <div class="btn-group-light btn-group">
+                                </div>
+                                <?php } ?>
+                                <?php if ($cv_link){?>
+                                    <div class="col-sm-12">
+                                <a role="button" tabindex="0" class="btn-group-light btn-group">
                                 <span class="btn about-btn"><i class="fas fa-graduation-cap px-2"></i></span>
-                                <a class="btn about-btn">Download my CV</a>
-                            </div> -->
+                                <span class="btn about-btn">Download my CV</a>
+                                </div>
+                                <?php } ?>
+                                
+
+                            </div>
 
                             </div> <!-- end row-->
                         </div><!-- end content container-->

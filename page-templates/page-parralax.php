@@ -38,7 +38,7 @@ global $post;
 					</div><!-- .entry-content -->
 
 
-				</main><!-- #main -->
+				</div><!-- #main -->
 
 			</div><!-- #primary -->
 

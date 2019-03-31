@@ -14,6 +14,7 @@ get_header();
 $container = get_theme_mod( 'diana_simple_container_type' );
 
 ?>
+<?php get_template_part( 'template-parts/header/header','page' ); ?>
 
 <div class="wrapper" id="search-wrapper">
 
@@ -24,7 +25,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
+			<div class="site-main">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -62,7 +63,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 				<?php endif; ?>
 
-			</main><!-- #main -->
+			</div><!-- #main -->
 
 			<!-- The pagination component -->
 			<?php diana_simple_pagination(); ?>

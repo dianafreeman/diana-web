@@ -45,12 +45,12 @@ if ( ! function_exists( 'diana_simple_woocommerce_wrapper_start' ) ) {
 		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';
 		get_template_part( 'global-templates/left-sidebar-check' );
-		echo '<main class="site-main" id="main">';
+		echo '<div class="site-main">';
 	}
 }
 if ( ! function_exists( 'diana_simple_woocommerce_wrapper_end' ) ) {
 	function diana_simple_woocommerce_wrapper_end() {
-		echo '</main><!-- #main -->';
+		echo '</div><!-- #main -->';
 		get_template_part( 'global-templates/right-sidebar-check' );
 		echo '</div><!-- .row -->';
 		echo '</div><!-- Container end -->';

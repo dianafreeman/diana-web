@@ -23,6 +23,7 @@
     }
     .slick-slide {
         width: 160px;
+        cursor: pointer;
         @media screen and (max-width: 460px) {
             width: 100vw;
         }

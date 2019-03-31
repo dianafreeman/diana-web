@@ -63,8 +63,12 @@ Patterns by: https://www.heropatterns.com/
 
   **TO DO**
 
+  - About
+    - Add CV Button
+    - Academic Experience
   - Blog
-    - Sub Cat: 
+    - Sub Categories?
+    - 
   - Privacy Policy
     - Cookie Jar
     - Cookie Policy
@@ -76,11 +80,15 @@ Patterns by: https://www.heropatterns.com/
 ####Snippets
 
 ````shell
-scp -r [assets] dsteakleyfreeman@dianasteakleyfreeman.com:/public_html/wp-content/themes/diana-simple/
+scp -r [assets] dsteakleyfreeman@dianasteakleyfreeman.com:~/public_html/wp-content/themes/diana-simple/
 
-scp -r [inc] dsteakleyfreeman@dianasteakleyfreeman.com:/public_html/wp-content/themes/diana-simple/
+scp -r [inc] dsteakleyfreeman@dianasteakleyfreeman.com:~/public_html/wp-content/themes/diana-simple/
 
-scp *.php dsteakleyfreeman@dianasteakleyfreeman.com:/public_html/wp-content/themes/diana-simple/
+scp *.php dsteakleyfreeman@dianasteakleyfreeman.com:~/public_html/wp-content/themes/diana-simple/
+
+scp /template-parts -r dsteakleyfreeman@dianasteakleyfreeman.com:~/public_html/wp-content/themes/diana-simple/
+
+scp /template-parts/front-page/content-front-page-projects.php dsteakleyfreeman@dianasteakleyfreeman.com:~/public_html/wp-content/themes/diana-simple/template-parts/front-page/
 ````
 
 

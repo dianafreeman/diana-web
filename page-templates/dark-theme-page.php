@@ -38,7 +38,7 @@ get_template_part('template-parts/header/header-page');
 
 					<?php endwhile; // end of the loop. ?>
 
-				</main><!-- #main -->
+				</div><!-- #main -->
 
 			</div><!-- #primary -->
 

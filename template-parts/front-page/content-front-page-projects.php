@@ -18,16 +18,16 @@ $featuredImageURL = get_the_post_thumbnail_url( get_the_ID(), 'large');
 ?>
 
 <!-- Card -->
-<a class="portfolio-item" href="<?php esc_url(the_permalink( )) ?>" >
 <div class="<?php echo esc_attr($classes) ?>" >
   <div class="card-overlay" > </div>
   <div class="project-color-overlay" style="background-color: <?php echo esc_attr($project_overlay) ;?>"> </div>
 
+     <a class="portfolio-item" href="<?php esc_url(the_permalink( )) ?>" >
 
   <div class="card-image" style="background-image: url(<?php echo esc_url($featuredImageURL) ;?>)">
   </div>
   <!-- Content -->
-    <div class="text-white text-center">
+    <div class="card-body text-white text-center">
 
 
        <?php 
@@ -59,9 +59,8 @@ $featuredImageURL = get_the_post_thumbnail_url( get_the_ID(), 'large');
       </div>
    <?php   endif; ?>
   </div><!-- end card-body--> 
+  </a>
 </div>
-</a>
-
 <!-- Card -->
 
  

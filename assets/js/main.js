@@ -129,6 +129,11 @@
             var dest = $(this).find('a[rel="bookmark"]').attr('href');
             window.open(dest, "_self");
         });
+
+        $('.slick-slide').click(function() {
+            var dest = $(this).find('.portfolio-item').attr('href');
+            window.open(dest, "_self");
+        });
     }); // end on load
 
 })(jQuery); // End of use strict

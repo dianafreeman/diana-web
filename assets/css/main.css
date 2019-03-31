@@ -10062,7 +10062,7 @@ section h2 {
 }
 @media screen and (min-width: 998px) {
   #animation-control {
-    z-index: 99;
+    z-index: 19;
   }
 }
 
@@ -10157,6 +10157,7 @@ section h2 {
 }
 #portfolio .slick-slide {
   width: 160px;
+  cursor: pointer;
   transition: width 0.5s;
 }
 @media screen and (max-width: 460px) {
@@ -10658,7 +10659,7 @@ h4 {
   display: inline-flex;
   margin: 1em;
 }
-#about .display-4, #about #portfolio .card .card-title, #portfolio .card #about .card-title {
+#about .typed-target {
   font-size: 3em;
 }
 #about .btn-group-light {
@@ -11356,10 +11357,6 @@ body.page-template-page-about .typted-box .typed-cursor {
 
 .bottom-right-header {
   float: left;
-}
-
-.fixed-top {
-  z-index: 20;
 }
 
 /*# sourceMappingURL=main.css.map */
