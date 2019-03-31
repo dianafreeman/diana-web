@@ -1,11 +1,8 @@
 // Define Constants!
 var SUBHEADS = jQuery('#typed-header .start-header .sub-heading span');
 
-
-
 // Add the "hidden" class to the subhead questions, this class will be used later on.
 SUBHEADS.addClass('hidden');
-
 
 // On Document Load
 jQuery(function($) {
@@ -39,23 +36,20 @@ jQuery(function($) {
     $('h2#subhead').css('opacity', '0');
 
     $('#masthead .background-div').toggleClass('final-state').addClass('fade-in-background');
-
-
-
     var options = {
-        strings: ["Coder. ^500", "Creator. ^500", "Communicator. ^1000", "Hi. ^500 I\'m Diana"],
+        strings: ["Coder. ^500", "Creator. ^500", "Communicator. ^500"],
         smartBackspace: true,
         backspeed: 1000,
-        typeSpeed: 90,
+        typeSpeed: 70,
         showCursor: true,
         autoInsertCss: true,
-        startDelay: 2000,
+        startDelay: 1800,
         onStringTyped: onStringTyped,
         onDestroy: revealfrontPage,
         onComplete: onComplete
     };
 
-    var typed = new Typed("#typed-string", options);
+    var typed = new Typed(".start-header #typed-string", options);
 
     $('#pause').toggle(function() {
         $(this).find('i').toggleClass('fa-play fa-pause');
@@ -65,9 +59,9 @@ jQuery(function($) {
         typed.start();
     });
 
-    $('#skip').click(function() {
-        typed.stop();
-        revealfrontPage();
+    $('#skip').click(function(e) {
+        e.preventDefault();
+        typed.destroy();
     });
 
 
@@ -77,7 +71,6 @@ jQuery(function($) {
     function revealfrontPage() {
         jQuery('#typed-header .final-header').css('opacity', '1');
         jQuery('#typed-header .start-header').css('opacity', '0');
-        jQuery('#typed-string').text('Hi. I\'m Diana');
         jQuery('#subhead').css('opacity', '1');
         destroyAnimationControls();
 
@@ -115,20 +108,22 @@ jQuery(function($) {
 
             }, 500);
         }, 500);
-        startHeader.animate({ 'opacity': '0' }, 2500);
-        finalHeader.animate({ 'opacity': '1' }, 2500);
-        $('#typed-string').text("Hi.  I'm Diana.");
+        startHeader.animate({ 'opacity': '0' }, 1500);
+        finalHeader.animate({ 'opacity': '1' }, 1500);
+        setTimeout(function() {
+            $('h1.final-string').removeClass('hidden').addClass('fadeIn');
+        }, 1500);
         fadeToFinal();
     }
 
     function fadeToFinal() {
 
         setTimeout(function() {
-            $('h2#subhead').removeClass('hidden').addClass('text-focus-in');
+            $('h2#subhead').removeClass('hidden').addClass('fadeIn');
             $('.typed-cursor').addClass('hidden');
             setTimeout(destroyAnimationControls, 1000);
 
-        }, 2000);
+        }, 1500);
 
 
     }

@@ -1,5 +1,5 @@
 (function($) {
-
+    $('[data-toggle="tooltip"]').tooltip();
     AOS.init();
 
 
@@ -63,6 +63,7 @@
             dots: true,
             infinite: true,
             speed: 300,
+            focusOnSelect: true,
             adaptiveHeight: true,
             variableWidth: true,
             centerMode: false,
@@ -76,6 +77,7 @@
                 {
                     breakpoint: 480,
                     settings: {
+                        variableWidth: false,
                         arrows: true
                     }
                 }
@@ -112,6 +114,21 @@
             clearTimeout(slideTimer);
         });
 
+
+        $('.show-more').click(function() {
+            var icon = $(this).find('.fa');
+            if (icon.hasClass('fa-chevron-left')) {
+                $(this).find('.fa').removeClass('fa-chevron-left').addClass('fa-chevron-down');
+            } else if (icon.hasClass('fa-chevron-down')) {
+                $(this).find('.fa').removeClass('fa-chevron-down').addClass('fa-chevron-left');
+            }
+        });
+
+
+        $('.archive-row').click(function() {
+            var dest = $(this).find('a[rel="bookmark"]').attr('href');
+            window.open(dest, "_self");
+        });
     }); // end on load
 
 })(jQuery); // End of use strict

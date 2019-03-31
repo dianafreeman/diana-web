@@ -57,9 +57,9 @@ function diana_simple_theme_scripts() {
 	wp_enqueue_script( 'typed-js', 'https://cdn.jsdelivr.net/npm/typed.js@2.0.9', array('jquery'), true );
 	
 	if (is_home()){
-		wp_enqueue_script( 'typed-header-index', get_stylesheet_directory_uri() . '/assets/js/typedHomePage.js', array('jquery','typed-js'), '', true );
+		wp_enqueue_script( 'typed-header-index', get_stylesheet_directory_uri() . '/assets/js/typedHomePage.min.js', array('jquery','typed-js'), '', true );
 	} else {
-		wp_enqueue_script( 'typed-header-page', get_stylesheet_directory_uri() . '/assets/js/typedPage.js', array('jquery','typed-js'), '', true );
+		wp_enqueue_script( 'typed-header-page', get_stylesheet_directory_uri() . '/assets/js/typedPage.min.js', array('jquery','typed-js'), '', true );
 
 	}
 

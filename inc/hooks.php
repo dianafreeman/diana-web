@@ -51,3 +51,4 @@ if ( ! function_exists( 'diana_simple_add_site_info' ) ) {
 		echo apply_filters( 'diana_simple_site_info_content', $site_info ); // WPCS: XSS ok.
 	}
 }
+

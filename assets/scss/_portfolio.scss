@@ -1,5 +1,5 @@
 #portfolio {
-    overflow: hidden;
+    overflow-x: hidden;
     .portfolio-container {
         height: 100%;
     }
@@ -11,7 +11,6 @@
             width: 30vw;
         }
     }
-    .slick-slide {}
     .portfolio-item {
         height: 100%;
         display: block;
@@ -24,9 +23,18 @@
     }
     .slick-slide {
         width: 160px;
+        @media screen and (max-width: 460px) {
+            width: 100vw;
+        }
         transition: width .5s;
+        &.slick-current,
         &:hover {
-            width: 70vw;
+            @media screen and (min-width: 460px) {
+                width: 70vw;
+            }
+            @media screen and (min-width: 768px) {
+                width: 80vw;
+            }
             .card-image {
                 background-size: cover;
             }
@@ -41,7 +49,6 @@
         width: calc(100% + 30px);
         position: relative;
         left: -15px;
-        height: 360px;
         overflow: hidden;
     }
     .card {
@@ -68,6 +75,9 @@
             text-align: left;
         }
         .card-footer {
+            @media screen and (min-width: 460px) {
+                display: none;
+            }
             position: absolute;
             width: 0;
             left: 0;
@@ -75,7 +85,9 @@
             background-color: $dark;
             border-bottom: 2px solid white;
             text-align: center;
-            display: none;
+            display: block;
+            width: 100%;
+            z-index: 1;
         }
         .project-color-overlay {
             opacity: 1;

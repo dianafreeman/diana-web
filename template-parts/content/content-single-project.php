@@ -1,6 +1,6 @@
 <?php
 /**
- * Single post partial template.
+ * Single post project template.
  *
  * @package understrap
  */
@@ -11,8 +11,10 @@
 	<div class="row">
 
 	</header><!-- .entry-header -->
-
-	<div class="entry-content">
+	<div class="col-sm-6">
+	<img style="width: 100%;" src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>" />
+	</div>
+	<div class="col-sm-6 entry-content">
 
 		<?php the_content(); ?>
 

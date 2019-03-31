@@ -17,66 +17,62 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 <?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
 
-	<!-- ******************* The Footer Full-width Widget Area ******************* -->
+<!-- ******************* The Footer Full-width Widget Area ******************* -->
 
-	<div class="container-fluid " id="wrapper-footer-full">
+<div class="container-fluid " id="wrapper-footer-full">
 
-		<div id="footer-full-content" tabindex="-1">
+    <div id="footer-full-content" tabindex="-1">
 
-			<div class="row bg-gradient-secondary pt-5 pb-4">
-				<?php dynamic_sidebar( 'footerfull' ); ?>
+        <div class="row bg-gradient-secondary pt-5 pb-4">
+            <?php dynamic_sidebar( 'footerfull' ); ?>
 
-			</div>
+        </div>
 
-		</div>
+    </div>
 
-	</div><!-- #wrapper-footer-full -->
+</div><!-- #wrapper-footer-full -->
+
+<?php else: ?>
+
+<div class="bg-secondary container-fluid pb-4" id="wrapper-footer">
+        <div class="row mb-4">
+          <div class="col-md-4 mb-2 mb-lg-0 text-center">
+            <h4 class="text-uppercase mb-4 text-light">Like My Work?</h4>
+            <?php echo do_shortcode('[badge from="buymeacoffee"]') ?>
+          </div><!-- end col --> 
+          <div class="col-md-4 mb-2 mb-lg-0 text-center">
+            <h4 class="text-uppercase mb-4 text-light">On the Web</h4>
+        
+
+            <?php echo do_shortcode('[solid-social]') ;?>
+
+          </div><!-- end col --> 
+          <div class="col-md-4 mb-2 mb-lg-0 text-center">
+            <h4 class="text-uppercase mb-4 text-light">You know the drill.</h4>
+              <a href="<?php echo esc_url(get_permalink( get_page_by_title( 'Privacy Policy' ) )); ?>" >Privacy Policy</a>.</p>
+          </div><!-- end col --> 
+        </div><!-- end row --> 
+        </div><!-- container end -->
 
 <?php endif; ?>
 
-<div class="bg-secondary" id="wrapper-footer">
+<div class="container-fluid">
+<div class="row bg-dark">
+        
+        <div class="col-sm-12 mb-4 mt-4">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
-<div class="row">
-	<div class="col-md-4 text-center">
-	<?php echo do_shortcode('[footer-social]') ;?>
-	</div>
-	<div class="col-md-4 text-center">
-
+<p class="text-light small text-center">Diana M. Steakley-Freeman &copy; 2019 | All Rights Reserved. 
+<br><a role="button" tabindex="0"
+    class="text-light muted"
+    href="<?php echo esc_url(get_permalink( get_page_by_title( 'Privacy Policy' ) )); ?> ">
+    Privacy Policy</a> <br> Proudly Powered by <a class="text-light muted" target="_blank" href="<?php echo esc_url('https://wordpress.org') ?>">WordPress</a></p>
 </div>
-
-<div class="col-md-4 text-center">
-
-</div>
-
-</div>
-		<div class="row bg-dark-accent">
-
-			<div class="col-md-12 text-center ">
-
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info mb-4 mt-4">
-
-						<?php diana_simple_site_info(); ?>
-
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
-
-		</div><!-- row end -->
-
-	</div><!-- container end -->
-
 </div><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
-
+</main> <!-- we also need this extra #main tag--> 
 <?php wp_footer(); ?>
 
 </body>
 
 </html>
-

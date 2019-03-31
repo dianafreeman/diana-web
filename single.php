@@ -27,7 +27,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-
+	
 					<?php get_template_part( 'template-parts/content/content', 'single' ); ?>
 
 					<?php diana_simple_post_nav(); ?>

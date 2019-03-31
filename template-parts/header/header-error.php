@@ -9,3 +9,5 @@
       </div><!-- end final state --> 
   </div><!-- end container --> 
 </header>
+<main id="content">
+  <!-- ends in the FOOTER.PHP file --> 

@@ -13,6 +13,12 @@ This project Grunt for compilation tasks
 
 
 
+#### Theme Structure
+
+​	**header.php**
+
+​	_
+
 #### Theme Taxonomies
 
  - tags
@@ -29,18 +35,7 @@ This theme was built using Understrap (by Underscores/Autommatic). Recommended i
 
 Patterns by: https://www.heropatterns.com/
 
-
-
-#### To Do (prioritized)
-
-1. Home Page
-2. About Page
-3. Projects Page
-   1. Add images to project
-   2. Create "project-single"
-4. Contact Page
-   - Social Media
-   - Contact Form
+1. - 
 
 
 
@@ -50,38 +45,10 @@ Patterns by: https://www.heropatterns.com/
 
 
 
-#### To Do (OLD)
 
-- Shortcodes
 
-  
-
-- Custom Fields
-
-  - Projects
-    - [x] Project Color
-    - [ ] Project Stack
-  - About
-    - 
-
-- Styling
-
-  - [x] Quote Boxes
-  - [ ] Logos for each stack
-
-- Shortcodes
-
-  - social icons
-    - linkedin
-    - twitter
-    - medium
-    - 
-  - badges
-    - godaddy pro
-    - github pro
-    - 
-  - Certifications
-    - Data Supervisor? 
+- Certifications
+  - Data Supervisor? 
 
  
 
@@ -94,20 +61,15 @@ Patterns by: https://www.heropatterns.com/
 
   
 
-  
+  **TO DO**
+
+  - Blog
+    - Sub Cat: 
+  - Privacy Policy
+    - Cookie Jar
+    - Cookie Policy
 
   
-
-  
-
-
-
-### Future options
-
-- Add [Composer][https://getcomposer.org/doc/00-intro.md] as a PHP module bundler
-- Git -- create a new remote destination
-
-
 
 
 

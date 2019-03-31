@@ -17,3 +17,46 @@
     @extend .sr-only;
     @extend .sr-only-focusable;
 }
+
+.skip-link {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: none;
+    color: $primary;
+    border-radius: 20px;
+    font-size: 20px;
+    z-index: 100;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+        border: 1px solid white;
+        color: white;
+    }
+}
+
+// This is applied to the the navigation bar, in conjunction with the z-index of the "skip-link"  
+.fixed-top {
+    z-index: 99 !important;
+}
+
+.nav-links {
+    padding: 1em 0em;
+}
+
+.typed-target {
+    display: inline;
+}
+
+body.archive .typed-box .typed-cursor {
+    font-size: 3em;
+}
+
+body.page-template-page-about .typted-box .typed-cursor {
+    font-size: 32px;
+}
+
+.typed-cursor {
+    display: inline-flex;
+}

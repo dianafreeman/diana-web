@@ -1,6 +1,6 @@
 .front-page-section {
     &:not(#front-page-header) {
-        padding: 3em 0em;
+        padding: calc(5px + 4vh) 0em;
     }
     &:nth-child(odd) {
         // background-image: url('../graphics/background.jpg');
@@ -42,6 +42,7 @@
 
 #front-page-header {
     position: relative;
-    top: 50px;
+    top: 0;
     height: 90vh;
+    min-height: 520px;
 }

@@ -1,32 +1,33 @@
 {
-  "name": "diana-simple",
-  "version": "1.0.0",
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "main": "Gruntfile.js",
-  "scripts": {
-    "workspace": "open README* && subl -n . && grunt",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "engines": {
-    "node": ">= 0.10.0"
-  },
-  "dependencies": {
-    "bootstrap": "^4.2.1"
-  },
-  "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.7.1",
-    "autoprefixer": "^9.5.0",
-    "cssnano": "^4.1.10",
-    "grunt": "^1.0.3",
-    "grunt-contrib-connect": "^2.0.0",
-    "grunt-contrib-jshint": "^2.0.0",
-    "grunt-contrib-qunit": "^3.0.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^4.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-postcss": "^0.9.0",
-    "pixrem": "^5.0.0"
-  }
+    "name": "diana-simple",
+    "version": "1.0.0",
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "main": "Gruntfile.js",
+    "scripts": {
+        "workspace": "open README* && subl -n . && grunt",
+        "push": "",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "dependencies": {
+        "bootstrap": "^4.2.1"
+    },
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.7.1",
+        "autoprefixer": "^9.5.0",
+        "cssnano": "^4.1.10",
+        "grunt": "^1.0.3",
+        "grunt-contrib-connect": "^2.0.0",
+        "grunt-contrib-jshint": "^2.0.0",
+        "grunt-contrib-qunit": "^3.0.1",
+        "grunt-contrib-sass": "^1.0.0",
+        "grunt-contrib-uglify": "^4.0.0",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-postcss": "^0.9.0",
+        "pixrem": "^5.0.0"
+    }
 }

@@ -23,7 +23,6 @@ $bio_image = get_field( 'bio_image' );
 ?>
 <div class="wrapper bg-primary" id="index-wrapper ">
     <div id="about" tabindex="-1">
-        <div class="row">
             <?php if ( have_posts() ) : ?>
             <?php /* Start the Loop */ ?>
             <?php while ( have_posts() ) : the_post(); ?>
@@ -104,16 +103,7 @@ $bio_image = get_field( 'bio_image' );
                         </div>
                     </div>
                     </div><!-- end container--> 
-                    <!-- <div class="page-section container-fluid bg-light">
-                    <div class="row">
-                        <div class="col-sm-6 mx-auto">
-                            <h1 class="text-uppercase">Tech</h1>
-
-
-                        </div>
-
-                    </div> row  -->
-                    <!-- </div> end page section -->
+            
             </article><!-- #post-## -->
             <?php endwhile; ?>
             <?php else : ?>

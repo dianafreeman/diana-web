@@ -1,3 +1,7 @@
+.form-container {
+    padding: 0 calc(10px + 3vw);
+}
+
 .wpcf7-form {
     p {
         color: white;
@@ -25,5 +29,6 @@
     .wpcf7-submit {
         @extend .btn;
         @extend .btn-success;
+        @extend .btn-xl;
     }
 }

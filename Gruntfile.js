@@ -57,7 +57,7 @@ module.exports = function(grunt) {
                 tasks: ['sass']
             },
             scripts: {
-                files: ['assets/js/type-index.js', 'assets/js/main.js'],
+                files: ['Gruntfile.js', 'assets/js/typedHomePage.js', 'assets/js/typedPage.js', 'assets/js/main.js'],
                 tasks: ['jshint', 'uglify']
 
             }

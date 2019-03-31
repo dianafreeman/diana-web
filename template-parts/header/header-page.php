@@ -15,9 +15,13 @@ $title = esc_html(get_the_title($post));
 <div class="container">
   <div class="row">
   <div class="col-sm-12">
+    <div class="typed-box">
          <h2 class="mb-5 display-4 typed-target"><?php echo esc_html($title) ;?></h2>
+         </div>
          <!-- <p class="muted">Full Stack Developer</p> -->		
     </div><!-- end col-sm-12--> 
     </div><!-- end row--> 
   </div><!-- end container --> 
 </div>
+<main id="content">
+  <!-- ends in the FOOTER.PHP file --> 

@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 $container = get_theme_mod( 'diana_simple_container_type' );
-get_template_part('template-parts/header/header','archive')
+get_template_part('template-parts/header/header','page')
 
 ?>
 

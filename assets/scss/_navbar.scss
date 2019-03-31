@@ -13,6 +13,9 @@
     .navbar-nav {
         letter-spacing: 0.0625rem;
         li.nav-item {
+            & a:focus {
+                @include hvr-underline-reveal();
+            }
             text-align: center;
             @include hvr-underline-reveal();
             a.nav-link {
@@ -24,6 +27,9 @@
     .navbar-toggler {
         font-size: 80%;
         padding: 0.8rem;
+        &:focus {
+            border: 2px solid white;
+        }
     }
 }
 

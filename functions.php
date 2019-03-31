@@ -35,3 +35,5 @@ foreach ( $diana_theme_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+

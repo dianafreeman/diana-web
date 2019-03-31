@@ -9584,7 +9584,7 @@ h3 {
 }
 
 .front-page-section:not(#front-page-header) {
-  padding: 3em 0em;
+  padding: calc(5px + 4vh) 0em;
 }
 .front-page-section:nth-child(even):not(#front-page-header) {
   position: relative;
@@ -9622,8 +9622,13 @@ h3 {
 
 #front-page-header {
   position: relative;
-  top: 50px;
+  top: 0;
   height: 90vh;
+  min-height: 520px;
+}
+
+.form-container {
+  padding: 0 calc(10px + 3vw);
 }
 
 .wpcf7-form p {
@@ -9710,6 +9715,11 @@ article {
   width: 100%;
 }
 
+#wrapper-footer .site-info {
+  position: relative;
+  top: 20px;
+}
+
 section .container {
   padding: 3rem 0;
 }
@@ -9777,6 +9787,37 @@ section h2 {
   position: relative;
   overflow: hidden;
 }
+#mainNav .navbar-nav li.nav-item a:focus {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+#mainNav .navbar-nav li.nav-item a:focus::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #899097;
+  height: 4px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+#mainNav .navbar-nav li.nav-item a:focus:hover::before, #mainNav .navbar-nav li.nav-item a:focus:focus::before, #mainNav .navbar-nav li.nav-item a:focus:active::before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
 #mainNav .navbar-nav li.nav-item::before {
   content: "";
   position: absolute;
@@ -9806,6 +9847,9 @@ section h2 {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.8rem;
+}
+#mainNav .navbar-toggler:focus {
+  border: 2px solid white;
 }
 
 @media (min-width: 992px) {
@@ -9852,8 +9896,12 @@ section h2 {
 }
 #masthead:not(.page-masthead) {
   background-size: cover;
-  background-attachment: fixed !important;
   height: 100%;
+}
+@media screen and (min-width: 768px) {
+  #masthead:not(.page-masthead) {
+    background-attachment: fixed !important;
+  }
 }
 #masthead.page-masthead {
   min-height: 150px;
@@ -9904,7 +9952,7 @@ section h2 {
   margin: 0 auto;
 }
 #typed-header .string-container {
-  padding: calc(20px + 1vw);
+  padding: calc(20px + 1vw) 0;
   border-radius: 10px;
   margin: 0 auto;
   display: inline-flex;
@@ -9977,16 +10025,25 @@ section h2 {
   font-family: "Montserrat";
 }
 
-#typed-string,
-#final-string {
-  font-size: 1.75em;
+#typed-string {
   display: block;
   min-height: 60px;
 }
 @media screen and (min-width: 525px) {
-  #typed-string,
-#final-string {
+  #typed-string {
     font-size: 2.5em;
+  }
+}
+
+.final-string {
+  display: block;
+  min-height: 60px;
+}
+@media screen and (min-width: 525px) {
+  .final-string {
+    font-size: 2.5em;
+    position: relative;
+    top: 3px;
   }
 }
 
@@ -10003,8 +10060,13 @@ section h2 {
   right: 2em;
   bottom: 1em;
 }
+@media screen and (min-width: 998px) {
+  #animation-control {
+    z-index: 99;
+  }
+}
 
-.logo-div {
+.navbar-brand .logo-div {
   background-size: contain;
   background-repeat: no-repeat;
   width: 30vw;
@@ -10012,7 +10074,10 @@ section h2 {
   height: 70px;
   background-image: url("../graphics/logo-in-gray.png");
 }
-.logo-div:hover, .logo-div:active, .logo-div:focus {
+.navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
+  outline: none;
+}
+.navbar-brand:hover .logo-div, .navbar-brand:active .logo-div, .navbar-brand:focus .logo-div {
   background-image: url("../graphics/logo-in-color.png");
 }
 
@@ -10069,7 +10134,7 @@ section h2 {
 }
 
 #portfolio {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 #portfolio .portfolio-container {
   height: 100%;
@@ -10094,13 +10159,25 @@ section h2 {
   width: 160px;
   transition: width 0.5s;
 }
-#portfolio .slick-slide:hover {
-  width: 70vw;
+@media screen and (max-width: 460px) {
+  #portfolio .slick-slide {
+    width: 100vw;
+  }
 }
-#portfolio .slick-slide:hover .card-image {
+@media screen and (min-width: 460px) {
+  #portfolio .slick-slide.slick-current, #portfolio .slick-slide:hover {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  #portfolio .slick-slide.slick-current, #portfolio .slick-slide:hover {
+    width: 80vw;
+  }
+}
+#portfolio .slick-slide.slick-current .card-image, #portfolio .slick-slide:hover .card-image {
   background-size: cover;
 }
-#portfolio .slick-slide:hover .card-footer {
+#portfolio .slick-slide.slick-current .card-footer, #portfolio .slick-slide:hover .card-footer {
   display: block;
   width: 100%;
   z-index: 1;
@@ -10109,7 +10186,6 @@ section h2 {
   width: calc(100% + 30px);
   position: relative;
   left: -15px;
-  height: 360px;
   overflow: hidden;
 }
 #portfolio .card {
@@ -10142,7 +10218,14 @@ section h2 {
   background-color: #353F4F;
   border-bottom: 2px solid white;
   text-align: center;
-  display: none;
+  display: block;
+  width: 100%;
+  z-index: 1;
+}
+@media screen and (min-width: 460px) {
+  #portfolio .card .card-footer {
+    display: none;
+  }
 }
 #portfolio .card .project-color-overlay {
   opacity: 1;
@@ -10602,15 +10685,26 @@ h4 {
     margin-top: 3em;
   }
 }
-#about .testimonial.card {
+#about .testimonial {
   min-height: 300px;
 }
-#about .testimonial.card .card-img-overlay {
+#about .testimonial .card-title {
+  width: 80%;
+  display: inline-block;
+}
+#about .testimonial .card-img-overlay {
   background-color: rgba(0, 0, 0, 0.4);
 }
-#about .testimonial.card .avatar {
+#about .testimonial .avatar {
   border: 0.1rem solid rgba(255, 255, 255, 0.3);
   max-width: 3rem;
+}
+#about .testimonial button.show-more {
+  border-radius: 100%;
+  float: right;
+}
+#about .testimonial .collapse p {
+  font-style: italic;
 }
 #about .page-section {
   padding-top: 2.5em;
@@ -11120,6 +11214,7 @@ h4 {
 }
 
 .archive-row {
+  cursor: pointer;
   position: relative;
   background-position-x: right;
   background-position-y: center;
@@ -11140,7 +11235,8 @@ h4 {
   }
 }
 @media screen and (min-width: 568px) {
-  .archive-row:hover .background-overlay {
+  .archive-row:hover .background-overlay,
+.archive-row:hover .card-footer.project {
     width: 50%;
   }
 }
@@ -11169,6 +11265,33 @@ h4 {
   padding-left: 0.5em;
   z-index: 2;
 }
+.archive-row .card-footer {
+  width: 100%;
+}
+.archive-row .card-footer.project {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  transition: width 0.5s ease-in-out;
+}
+.archive-row .card-footer .entry-title {
+  max-width: 50vw;
+}
+.archive-row .tech-terms {
+  display: none;
+}
+.archive-row .stack-logo {
+  padding: 5px;
+  border: 1px solid #efefef;
+  border-radius: 100%;
+  margin: 0px 5px;
+}
+.archive-row .stack-logo i {
+  color: #efefef;
+  padding: 3px;
+}
 
 .scroll-to-top {
   z-index: 1042;
@@ -11183,7 +11306,47 @@ h4 {
   line-height: 3.1rem;
 }
 
-.btn-xl {
+.skip-link {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: none;
+  color: #2E3D57;
+  border-radius: 20px;
+  font-size: 20px;
+  z-index: 100;
+}
+.skip-link:hover, .skip-link:active, .skip-link:focus {
+  outline: none;
+  border: 1px solid white;
+  color: white;
+}
+
+.fixed-top {
+  z-index: 99 !important;
+}
+
+.nav-links {
+  padding: 1em 0em;
+}
+
+.typed-target {
+  display: inline;
+}
+
+body.archive .typed-box .typed-cursor {
+  font-size: 3em;
+}
+
+body.page-template-page-about .typted-box .typed-cursor {
+  font-size: 32px;
+}
+
+.typed-cursor {
+  display: inline-flex;
+}
+
+.btn-xl, .wpcf7-form .wpcf7-submit {
   padding: 1em;
 }
 
@@ -11193,6 +11356,10 @@ h4 {
 
 .bottom-right-header {
   float: left;
+}
+
+.fixed-top {
+  z-index: 20;
 }
 
 /*# sourceMappingURL=main.css.map */
