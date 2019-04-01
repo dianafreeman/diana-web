@@ -10,6 +10,10 @@
         "push": "",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dianafreeman/diana-web"
+    },
     "engines": {
         "node": ">= 0.10.0"
     },
@@ -20,13 +24,14 @@
         "@fortawesome/fontawesome-free": "^5.7.1",
         "autoprefixer": "^9.5.0",
         "cssnano": "^4.1.10",
-        "grunt": "^1.0.3",
+        "grunt": "^1.0.4",
         "grunt-contrib-connect": "^2.0.0",
         "grunt-contrib-jshint": "^2.0.0",
         "grunt-contrib-qunit": "^3.0.1",
         "grunt-contrib-sass": "^1.0.0",
         "grunt-contrib-uglify": "^4.0.0",
         "grunt-contrib-watch": "^1.1.0",
+        "grunt-cssnano": "^2.1.0",
         "grunt-postcss": "^0.9.0",
         "pixrem": "^5.0.0"
     }

@@ -53,8 +53,8 @@
         overflow: hidden;
     }
     .card {
-        height: 400px;
-        max-height: 60vh;
+        min-height: 340px;
+        height: 60vh;
         border: none;
         &-body,
         &-image {

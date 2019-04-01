@@ -2,10 +2,11 @@
 // The template for displaying the header
 ?>
 
-
+<main id="content">
+  <!-- ends in the FOOTER.PHP file --> 
+  <div class="parallax-background hero-original">
 <section id="front-page-header" class="front-page-section text-center" role="banner">
-    <header id="masthead"
-        style="background-image: url(<?php echo esc_url(get_stylesheet_directory_uri().'/assets/graphics/hero-original.jpg'); ?>">
+    <header id="masthead">
         <div class="background-div final-state">
             <div id="typed-header">
                 <div class="final-header">
@@ -36,7 +37,14 @@
 
 
 
-                <div id="animation-control">
+                
+            </div><!-- end typed headers -->
+            <h2 id="subhead" class="mt-4 mb-0 animated sub-heading">How can I help?</h2>
+
+        </div><!-- end background div -->
+        
+    </header>
+    <div id="animation-control">
                     <button href="#" id="pause" class="btn btn-secondary" tabindex="0" role="button">
                         <i class="fas fa-pause"></i>
                         <span class="screen-reader-text">Pause</span>
@@ -44,13 +52,6 @@
                     <button href="#" id="skip" class="btn btn-secondary" tabindex="0" role="button"><i class="fas fa-step-forward"></i><span
                             class="screen-reader-text">Skip</span></button>
                 </div>
-            </div><!-- end typed headers -->
-            <h2 id="subhead" class="mt-4 mb-0 animated sub-heading">How can I help?</h2>
-
-        </div><!-- end background div -->
-
-    </header>
-
 </section>
-<main id="content">
-  <!-- ends in the FOOTER.PHP file --> 
+</div> <!-- end parallax background--> 
+

@@ -5,15 +5,15 @@
             background-attachment: fixed;
             background-size: cover;
         }
-        background-image: url('../graphics/about-img.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        .background-div {
-            height: 100%;
-            width: 100%;
-            background-color: #1d21246e;
-        }
+        .parallax-background {}
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-position: center;
+        // .background-div {
+        //     height: 100%;
+        //     width: 100%;
+        //     background-color: #1d21246e;
+        // }
     }
     .header-row {
         position: absolute;
@@ -34,7 +34,7 @@
         margin: 1em;
     }
     .typed-target {
-        font-size: 3em;
+        font-size: calc(15px + 1vw);
     }
     .btn-group-light {
         width: 100%;

@@ -72,6 +72,7 @@ jQuery(function($) {
         jQuery('#typed-header .final-header').css('opacity', '1');
         jQuery('#typed-header .start-header').css('opacity', '0');
         jQuery('#subhead').css('opacity', '1');
+        jQuery('#typed-header .final-header .final-string').removeClass('hidden');
         destroyAnimationControls();
 
 
@@ -131,5 +132,25 @@ jQuery(function($) {
     function destroyAnimationControls() {
         $('#animation-control').addClass('hidden');
     }
+
+
+    // Scroll to top button appear
+    $(document).scroll(function() {
+        var scrollDistance = $(window).scrollTop();
+        var portfolioTop = $('#portfolio').offset().top;
+        var navHeight = $('#mainNav').height();
+        // console.log(scrollDistance);
+        //console.log(portfolioTop - navHeight);
+
+        if (scrollDistance >= (portfolioTop - navHeight)) {
+            if ($('.parallax-background').hasClass('hero-original'))
+                $('.parallax-background').removeClass('hero-original').addClass('about-img');
+        }
+        if (scrollDistance < (portfolioTop - navHeight)) {
+            if ($('.parallax-background').hasClass('about-img'))
+                $('.parallax-background').removeClass('about-img').addClass('hero-original');
+
+        }
+    });
 
 });

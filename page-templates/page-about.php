@@ -49,7 +49,8 @@ $cv_link = get_field('cv_link');
                                 <?php } ?>
                                 <?php if ($cv_link){?>
                                     <div class="col-sm-12">
-                                <a role="button" tabindex="0" class="btn-group-light btn-group">
+                                    <a role="button" tabindex="0" class="btn-group-light btn-group" target="_blank"
+                                    href="<?php echo esc_url($cv_link) ?>">
                                 <span class="btn about-btn"><i class="fas fa-graduation-cap px-2"></i></span>
                                 <span class="btn about-btn">Download my CV</a>
                                 </div>

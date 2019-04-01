@@ -3,16 +3,7 @@
     AOS.init();
 
 
-    // Scroll to top button appear
-    $(document).scroll(function() {
-        var scrollDistance = $(this).scrollTop();
-        if (scrollDistance > 100) {
-            $('.scroll-to-top').fadeIn();
-        } else {
-            $('.scroll-to-top').fadeOut();
 
-        }
-    });
 
 
 
@@ -41,7 +32,7 @@
     // Collapse now if page is not at top
     navbarCollapse();
     // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse);
+    $(document).scroll(navbarCollapse);
 
 
     // Floating label headings for the contact form
@@ -58,7 +49,6 @@
 
     $(function() {
         $('#masthead.crossfade').addClass('final');
-        console.log('loaded!');
         $('.portfolio-carousel').slick({
             dots: true,
             infinite: true,

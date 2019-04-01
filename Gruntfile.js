@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         jshint: {
-            files: ['Gruntfile.js', 'assets/js/typedHomePage.js', 'assets/js/typedPage.js', 'assets/js/main.js'],
+            files: ['Gruntfile.js', 'assets/js/homePage.js', 'assets/js/page.js', 'assets/js/main.js'],
             options: {
                 globals: {
                     jQuery: true
@@ -28,8 +28,8 @@ module.exports = function(grunt) {
             my_target: {
                 files: {
                     'assets/js/main.min.js': ['assets/js/main.js'],
-                    'assets/js/typedHomePage.min.js': ['assets/js/typedHomePage.js'],
-                    'assets/js/typedPage.min.js': ['assets/js/typedPage.js'],
+                    'assets/js/homePage.min.js': ['assets/js/homePage.js'],
+                    'assets/js/page.min.js': ['assets/js/page.js'],
 
 
                 }
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
                 tasks: ['sass']
             },
             scripts: {
-                files: ['Gruntfile.js', 'assets/js/typedHomePage.js', 'assets/js/typedPage.js', 'assets/js/main.js'],
+                files: ['Gruntfile.js', 'assets/js/homePage.js', 'assets/js/page.js', 'assets/js/main.js'],
                 tasks: ['jshint', 'uglify']
 
             }
@@ -70,6 +70,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-cssnano');
 
 
 

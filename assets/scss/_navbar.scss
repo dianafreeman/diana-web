@@ -14,7 +14,7 @@
         letter-spacing: 0.0625rem;
         li.nav-item {
             & a:focus {
-                @include hvr-underline-reveal();
+                border: 1px solid lightgray;
             }
             text-align: center;
             @include hvr-underline-reveal();
@@ -60,11 +60,12 @@
             }
         }
     }
-    #mainNav.navbar-shrink {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        .navbar-brand {
-            font-size: 1.5em;
-        }
+}
+
+.navbar-shrink {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    .navbar-brand {
+        font-size: 1.5em !important;
     }
 }

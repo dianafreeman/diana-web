@@ -1,23 +1,9 @@
 .front-page-section {
     &:not(#front-page-header) {
-        padding: calc(5px + 4vh) 0em;
-    }
-    &:nth-child(odd) {
-        // background-image: url('../graphics/background.jpg');
-        // background-position: center;
-        // background-attachment: fixed;
+        padding: calc(20px + 5vh) 0em
     }
     &:nth-child(even):not(#front-page-header) {
         position: relative;
-        &:before {
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, .45);
-        }
         .section-content {
             position: relative;
         }
@@ -42,7 +28,7 @@
 
 #front-page-header {
     position: relative;
-    top: 0;
+    top: calc(20px + 2vw);
     height: 90vh;
     min-height: 520px;
 }

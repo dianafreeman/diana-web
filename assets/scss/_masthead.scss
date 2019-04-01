@@ -1,19 +1,19 @@
-#masthead.fixed {
-    @media screen and (min-width: 768px) {}
+.page-masthead {
+    &:before {
+        content: '';
+        position: absolute;
+        background: rgba(139, 107, 107, 0.36);
+        height: 100%;
+        width: 100%;
+        z-index: -10;
+    }
 }
 
 #masthead {
     &:not(.page-masthead) {
         background-size: cover;
-        @media screen and (min-width: 768px) {
-            background-attachment: fixed !important;
-        }
         height: 100%
     }
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: bottom;
-    padding-top: 130px;
     width: 100%;
     position: relative;
     &.page-masthead {
@@ -36,15 +36,9 @@
         }
     }
     .background-div {
-        padding-top: 10em;
-        position: absolute;
+        padding: 20vh 0;
         width: 100%;
         height: 100%;
-        top: 0;
-        background-color: rgba(0, 0, 0, .45);
-        &.final-state {
-            background-color: rgba(0, 0, 0, .45);
-        }
     }
     #subhead {
         font-size: 20px;
@@ -59,6 +53,7 @@
 }
 
 #typed-header {
+    padding-top: calc(25px + 5vw);
     position: static;
     width: 90%;
     margin: 0 auto;
@@ -161,8 +156,8 @@
 
 #animation-control {
     position: absolute;
-    right: 2em;
-    bottom: 1em;
+    right: 1em;
+    top: 80%;
     @media screen and (min-width: 998px) {
         z-index: 19;
     }

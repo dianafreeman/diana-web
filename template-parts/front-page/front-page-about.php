@@ -9,7 +9,6 @@ $cv_page_id = 424;
 ?>
 
 
-
   <div class="container-fluid section-content ">
     <div class="row">
       <div class="offset-sm-6 col-sm-6 pt-4 pb-4 bg-dark ">

@@ -27,4 +27,11 @@
         }, 1000);
     }
 
+
+    // Scroll to top button appear
+    $(document).scroll(function() {
+        var scrollDistance = $(window).scrollTop();
+        console.log(scrollDistance);
+    });
+
 })(jQuery); // end on document load;
