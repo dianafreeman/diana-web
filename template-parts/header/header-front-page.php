@@ -2,7 +2,7 @@
 // The template for displaying the header
 ?>
 
-<main id="content">
+<main id="content" class="front-page">
   <!-- ends in the FOOTER.PHP file --> 
   <div class="parallax-background hero-original">
 <section id="front-page-header" class="front-page-section text-center" role="banner">

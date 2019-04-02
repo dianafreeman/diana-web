@@ -14,11 +14,9 @@ if (is_category()){
 ?>
 <main id="content" >
 <div id="about-page" class="parallax-background">
-
   <!-- ends in the FOOTER.PHP file --> 
 <div id="masthead" class="page-masthead text-white text-center">
     <div id="about" class="container">
-        <div class="header-overlay"></div>
         <div class="row header-row">
             <div class="col-md-10 mx-auto">
                 <h2 class="mb-5 display-4">Diana M Steakley-Freeman</h2>

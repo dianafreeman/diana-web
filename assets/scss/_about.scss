@@ -33,8 +33,17 @@
         display: inline-flex;
         margin: 1em;
     }
-    .typed-target {
-        font-size: calc(15px + 1vw);
+    .typed-box {
+        display: inline-flex;
+        .typed-target {
+            font-size: calc(15px + 1vw);
+            display: inline;
+            margin: unset;
+            line-height: 60px;
+        }
+        .typed-cursor {
+            font-size: calc(20px + 4vw);
+        }
     }
     .btn-group-light {
         width: 100%;

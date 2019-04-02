@@ -13,7 +13,7 @@ $title = esc_html(get_the_title($post));
 <main id="content">
   <!-- ends in the FOOTER.PHP file --> 
 <div id="masthead" class="half-height text-white text-center bg-secondary">
-<div class="container">
+<div class="container header-content">
   <div class="row">
   <div class="col-sm-12">
     <div class="typed-box">

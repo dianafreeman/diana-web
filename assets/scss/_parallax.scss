@@ -28,6 +28,10 @@
 
 #about-page {
     &.parallax-background:before {
+        @media screen and (min-width: 778px) {
+            background-size: contain;
+        }
+        background-size: cover;
         background-image: url("../graphics/crossfade-3-w.jpeg");
     }
 }

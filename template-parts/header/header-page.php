@@ -11,17 +11,16 @@ $title = esc_html(get_the_title($post));
 
 ?>
 <main id="content">
-  <!-- ends in the FOOTER.PHP file --> 
-<div id="masthead" class="half-height text-white text-center bg-secondary">
+    <!-- ends in the FOOTER.PHP file -->
+    <div id="masthead" class="half-height text-white text-center bg-secondary">
+        <div class="container-fluid header-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="typed-box">
+                        <h2 class="display-4 typed-target"><?php echo esc_html($title) ;?></h2>
 
-<div class="container">
-  <div class="row">
-  <div class="col-sm-12">
-    <div class="typed-box">
-         <h2 class="mb-5 display-4 typed-target"><?php echo esc_html($title) ;?></h2>
-         </div>
-         <!-- <p class="muted">Full Stack Developer</p> -->		
-    </div><!-- end col-sm-12--> 
-    </div><!-- end row--> 
-  </div><!-- end container --> 
-</div>
+                    </div>
+                </div><!-- end col-sm-12-->
+            </div><!-- end row-->
+        </div><!-- end container -->
+    </div>

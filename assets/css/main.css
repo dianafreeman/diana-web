@@ -9584,7 +9584,8 @@ h3 {
 }
 
 .front-page-section:not(#front-page-header) {
-  padding: calc(20px + 5vh) 0em;
+  padding-top: calc(20px + 5vh);
+  padding-bottom: 20px;
 }
 .front-page-section:nth-child(even):not(#front-page-header) {
   position: relative;
@@ -9876,10 +9877,23 @@ section h2 {
   margin-top: 2.5em;
   margin-bottom: 2em;
 }
-#masthead.half-height {
-  height: 320px;
+#masthead .typed-box:not(#about .typed-box) {
+  margin-bottom: 15px;
+  display: flex;
+  position: relative;
 }
-#masthead.half-height .container {
+#masthead .typed-box:not(#about .typed-box) .typed-target {
+  font-size: calc(20px + 5vw);
+  display: inline-flex;
+}
+#masthead .typed-box:not(#about .typed-box) .typed-cursor {
+  display: initial;
+}
+#masthead.half-height {
+  height: 520px;
+  max-height: 60vh;
+}
+#masthead.half-height .header-content {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -10250,7 +10264,13 @@ section h2 {
 }
 
 #about-page.parallax-background:before {
+  background-size: cover;
   background-image: url("../graphics/crossfade-3-w.jpeg");
+}
+@media screen and (min-width: 778px) {
+  #about-page.parallax-background:before {
+    background-size: contain;
+  }
 }
 
 a {
@@ -10600,8 +10620,17 @@ h4 {
   display: inline-flex;
   margin: 1em;
 }
-#about .typed-target {
+#about .typed-box {
+  display: inline-flex;
+}
+#about .typed-box .typed-target {
   font-size: calc(15px + 1vw);
+  display: inline;
+  margin: unset;
+  line-height: 60px;
+}
+#about .typed-box .typed-cursor {
+  font-size: calc(20px + 4vw);
 }
 #about .btn-group-light {
   width: 100%;
@@ -11235,6 +11264,10 @@ h4 {
   padding: 3px;
 }
 
+#content.archive .typed-cursor {
+  font-size: calc(15px + 5vw);
+}
+
 .scroll-to-top {
   z-index: 1042;
   right: 1rem;
@@ -11270,22 +11303,6 @@ h4 {
 
 .nav-links {
   padding: 1em 0em;
-}
-
-.typed-target {
-  display: inline;
-}
-
-body.archive .typed-box .typed-cursor {
-  font-size: 3em;
-}
-
-body.page-template-page-about .typted-box .typed-cursor {
-  font-size: 32px;
-}
-
-.typed-cursor {
-  display: inline-flex;
 }
 
 .btn-xl, .wpcf7-form .wpcf7-submit {
