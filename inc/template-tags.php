@@ -34,15 +34,15 @@ if ( ! function_exists( 'diana_simple_posted_on' ) ) {
 				apply_filters( 'diana_simple_posted_on_time', $time_string )
 			)
 		);
-		$byline      = apply_filters(
-			'diana_simple_posted_by', sprintf(
-				'<span class="byline"> %1$s<span class="author vcard"><a class="url fn n" href="%2$s"> %3$s</a></span></span>',
-				$posted_on ? esc_html_x( 'by', 'post author', 'diana-simple' ) : esc_html_x( 'Posted by', 'post author', 'diana-simple' ),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_html( get_the_author() )
-			)
-		);
-		echo $posted_on . $byline; // WPCS: XSS OK.
+		// $byline      = apply_filters(
+		// 	'diana_simple_posted_by', sprintf(
+		// 		'<span class="byline"> %1$s<span class="author vcard"><a class="url fn n" href="%2$s"> %3$s</a></span></span>',
+		// 		$posted_on ? esc_html_x( 'by', 'post author', 'diana-simple' ) : esc_html_x( 'Posted by', 'post author', 'diana-simple' ),
+		// 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		// 		esc_html( get_the_author() )
+		// 	)
+		// );
+		echo $posted_on;// . $byline; // WPCS: XSS OK.
 	}
 }
 

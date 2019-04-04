@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 $container = get_theme_mod( 'diana_simple_container_type' );
 ?>
-<?php get_template_part( 'template-parts/header/header','page' ); ?>
+<?php get_template_part( 'template-parts/header/header','single' ); ?>
 
 
 <div class="container" id="single-wrapper">
@@ -23,6 +23,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<?php diana_simple_post_nav(); ?>
 
 			<div class="site-main">
 
@@ -30,7 +31,6 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 	
 					<?php get_template_part( 'template-parts/content/content', 'single' ); ?>
 
-					<?php diana_simple_post_nav(); ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.

@@ -1,13 +1,5 @@
 <?php 
-global $post;
-
-
- if (is_category()){
-$title = esc_html(get_the_category()[0]->name);
-} else {
-$title = esc_html(get_the_title($post));
-};
-
+$title = get_the_title($post);
 $post_color = get_field("post_color");
 
 ?>
@@ -23,5 +15,9 @@ $post_color = get_field("post_color");
                     </div>
                 </div><!-- end col-sm-12-->
             </div><!-- end row-->
+            <div class="row">
+            <?php diana_simple_posted_on(); ?>
+
+            </div>
         </div><!-- end container -->
     </div>

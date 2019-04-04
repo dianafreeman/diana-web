@@ -30,12 +30,16 @@
         margin-bottom: 15px;
         display: flex;
         position: relative;
-        .typed-target {
-            font-size: calc(20px + 5vw);
+        .typed-target, .typed-cursor {
+            @media screen and (min-width: 998px){
+                font-size: 55px;
+            }
+            font-size: calc(15px + 5vw);
             display: inline-flex;
         }
         .typed-cursor {
             display: initial;
+            
         }
     }
     &.half-height {
