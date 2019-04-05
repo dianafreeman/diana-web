@@ -28,18 +28,16 @@
     }
     .typed-box:not(#about .typed-box) {
         margin-bottom: 15px;
-        display: flex;
-        position: relative;
-        .typed-target, .typed-cursor {
-            @media screen and (min-width: 998px){
+        // display: inline;
+        .typed-target {
+            @media screen and (min-width: 998px) {
                 font-size: 55px;
             }
-            font-size: calc(15px + 5vw);
-            display: inline-flex;
-        }
-        .typed-cursor {
-            display: initial;
-            
+            @media screen and (min-width: 568px) {
+                font-size: calc(20px + 5vw);
+            }
+            font-size: 30px;
+            display: inline;
         }
     }
     &.half-height {
@@ -67,6 +65,13 @@
             font-size: 1.5em;
         }
     }
+}
+
+.typed-cursor:not(#about.container .typed-cursor) {
+    @media screen and (min-width: 998px) {
+        font-size: 55px;
+    }
+    font-size: calc(15px + 5vw);
 }
 
 #typed-header {
@@ -164,9 +169,6 @@
 }
 
 .typed-cursor {
-    font-size: calc(1.25em + 2vw);
-    line-height: calc(1.25em + 2vw);
-    display: flex;
     color: #eee;
     @include text-shadow(black);
 }
@@ -230,5 +232,30 @@
     }
     100% {
         background-image: url('../graphics/crossfade-3-w.jpeg');
+    }
+}
+
+#masthead.single {
+    min-height: 500px;
+    position: relative;
+    height: 50vh;
+    background-size: contain;
+    .header-content {
+        position: absolute;
+        bottom: 0;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .typed-target {
+        font-size: calc(15px + 5vw);
+        @media screen and (min-width: 996px) {
+            font-size: 50px;
+        }
     }
 }

@@ -17,9 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'diana_simple_posted_on' ) ) {
 	function diana_simple_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s"> (%4$s) </time>';
-		}
+	
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
@@ -28,7 +26,7 @@ if ( ! function_exists( 'diana_simple_posted_on' ) ) {
 		);
 		$posted_on   = apply_filters(
 			'diana_simple_posted_on', sprintf(
-				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
+				'<span class="posted-on">%1$s %3$s</span>',
 				esc_html_x( 'Posted on', 'post date', 'diana-simple' ),
 				esc_url( get_permalink() ),
 				apply_filters( 'diana_simple_posted_on_time', $time_string )
@@ -55,11 +53,11 @@ if ( ! function_exists( 'diana_simple_entry_footer' ) ) {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'diana-simple' ) );
-			if ( $categories_list && diana_simple_categorized_blog() ) {
-				/* translators: %s: Categories of current post */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'diana-simple' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
+			// $categories_list = get_the_category_list( esc_html__( ', ', 'diana-simple' ) );
+			// if ( $categories_list && diana_simple_categorized_blog() ) {
+			// 	/* translators: %s: Categories of current post */
+			// 	printf( '<span class="cat-links">' . esc_html__( 'Posted in %s', 'diana-simple' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			// }
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'diana-simple' ) );
 			if ( $tags_list ) {

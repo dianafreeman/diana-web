@@ -4,6 +4,9 @@
     background-position-x: right;
     background-position-y: center;
     background-repeat: no-repeat;
+    @media screen and (max-width: 568px) {
+        min-height: 70vh;
+    }
     min-height: 300px;
     border-top: 10px solid $primary;
     .background-overlay {
@@ -29,14 +32,23 @@
             }
         }
     }
+    .entry-header {
+        z-index: 1;
+        color: white;
+        @media screen and (min-width: 568px) {
+            width: 50%;
+        }
+    }
     .entry-title {
+        margin-left: 20px;
+        color: white;
         a {
             color: white;
             text-decoration: none;
             &:hover,
             &:active,
             &:focus {
-                color: $light-accent;
+                text-decoration: underline;
             }
         }
     }
@@ -47,6 +59,12 @@
     }
     .image-container {
         background-size: cover;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        @media screen and (min-width: 568px) {
+            width: 50%;
+        }
     }
     .entry-content {
         padding-top: 1em;
@@ -84,4 +102,15 @@
 
 #content.archive .typed-cursor {
     font-size: calc(15px + 5vw);
+}
+
+.category-blog .archive-row {
+    .card-footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, .5);
+        color: white !important;
+    }
 }

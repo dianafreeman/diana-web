@@ -23,8 +23,7 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-			<?php diana_simple_post_nav(); ?>
-
+			
 			<div class="site-main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
