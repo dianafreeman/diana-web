@@ -43,6 +43,7 @@ $construction = get_theme_mod( 'diana_simple_construction_mode' );
         <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
         <div class="navbar navbar-expand-md bg-dark fixed-top">
+        <div class="accessibility-controls"></div>
             <a class="btn btn-round skip-link"
                 href="#content"
                 data-toggle="tooltip" data-placement="right" 

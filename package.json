@@ -6,8 +6,7 @@
     "description": "",
     "main": "Gruntfile.js",
     "scripts": {
-        "workspace": "open README* && subl -n . && grunt",
-        "push": "",
+        "deploy": "scp *.php dsteakleyfreeman@dianasteakleyfreeman.com/:~/public_html/wp-content/themes/diana-simple/",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {

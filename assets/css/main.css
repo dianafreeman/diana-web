@@ -11354,22 +11354,6 @@ h4 {
   line-height: 3.1rem;
 }
 
-.skip-link {
-  top: 0;
-  left: 0;
-  position: absolute;
-  background: none;
-  color: #2E3D57;
-  border-radius: 20px;
-  font-size: 20px;
-  z-index: 100;
-}
-.skip-link:hover, .skip-link:active, .skip-link:focus {
-  outline: none;
-  border: 1px solid white;
-  color: white;
-}
-
 .fixed-top {
   z-index: 99 !important;
 }
@@ -11380,6 +11364,31 @@ h4 {
 
 .entry-content {
   padding: 20px 0px;
+}
+
+.skip-link {
+  background: none;
+  color: #2E3D57;
+  border-radius: 20px;
+  font-size: 20px;
+  z-index: 100;
+  border: 1px solid gray;
+  color: gray;
+}
+.skip-link:hover, .skip-link:active, .skip-link:focus {
+  outline: none;
+  border: 1px solid white;
+  color: white;
+}
+
+.accessibility-controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: inherit;
+}
+.logged-in .accessibility-controls {
+  top: 20px;
 }
 
 .btn-xl, .wpcf7-form .wpcf7-submit {
