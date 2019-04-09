@@ -107,10 +107,15 @@
 
         $('.show-more').click(function() {
             var icon = $(this).find('.fa');
+
             if (icon.hasClass('fa-chevron-left')) {
+                $(this).find('.tooltip-box').attr('data-original-title', 'Collapse');
                 $(this).find('.fa').removeClass('fa-chevron-left').addClass('fa-chevron-down');
+
             } else if (icon.hasClass('fa-chevron-down')) {
                 $(this).find('.fa').removeClass('fa-chevron-down').addClass('fa-chevron-left');
+                $(this).find('.tooltip-box').attr('data-original-title', 'Expand');
+
             }
         });
 
@@ -122,7 +127,9 @@
 
         $('.slick-slide').click(function() {
             var dest = $(this).find('.portfolio-item').attr('href');
-            window.open(dest, "_self");
+            if (dest) {
+                window.open(dest, "_self");
+            }
         });
     }); // end on load
 

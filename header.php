@@ -41,16 +41,8 @@ $construction = get_theme_mod( 'diana_simple_construction_mode' );
 
         <!-- ******************* The Navbar Area ******************* -->
         <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
-
-        <div class="navbar navbar-expand-md bg-dark fixed-top">
-        <div class="accessibility-controls"></div>
-            <a class="btn btn-round skip-link"
-                href="#content"
-                data-toggle="tooltip" data-placement="right" 
-                title="Skip to content"><i class="fas fa-chevron-down"></i><span class="sr-only"> <?php esc_html_e( 'Skip to content', 'diana-simple' ); ?></span>
-            </a>
-
-            <nav id="mainNav" class="navbar navbar-expand-md bg-dark fixed-top" aria-label="Main Navigation">
+       
+            <nav id="mainNav" class="navbar navbar-expand-md bg-dark" aria-label="Main Navigation">
 
 
                 <!-- Your site title as branding in the menu -->
@@ -101,8 +93,7 @@ $construction = get_theme_mod( 'diana_simple_construction_mode' );
         ); ?>
 
             </nav><!-- .site-navigation -->
-            </div><!-- end fixed-top--> 
         </div><!-- #wrapper-navbar end -->
-
+        </div><!--end .fixed-top--> 
         <!-- Header -->
      

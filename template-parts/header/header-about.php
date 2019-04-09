@@ -12,7 +12,6 @@ if (is_category()){
   $title = esc_html(get_the_title($post));
   };
 ?>
-<main id="content" >
 <div id="about-page" class="parallax-background">
   <!-- ends in the FOOTER.PHP file --> 
 <div id="masthead" class="page-masthead text-white text-center">
@@ -28,3 +27,4 @@ if (is_category()){
     </div><!-- end container -->
 </div><!-- end #masthead--> 
 </div><!-- end parallax-background-->
+<main id="content" >

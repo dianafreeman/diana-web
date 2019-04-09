@@ -84,7 +84,7 @@ $cv_link = get_field('cv_link');
                             </div>
                         </div>
                         <div class="container">
-                        <div class="testimonial-carousel row">
+                        <div class="testimonial-carousel">
 
                             <?php
 								$args = array(

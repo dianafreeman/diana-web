@@ -8,7 +8,6 @@ $title = esc_html(get_the_category()[0]->name);
 $title = esc_html(get_the_title($post));
 };
 ?>
-<main id="content" class="archive">
   <!-- ends in the FOOTER.PHP file --> 
 <div id="masthead" class="half-height text-white text-center bg-secondary">
 <div class="container-fluid header-content">
@@ -28,3 +27,4 @@ $title = esc_html(get_the_title($post));
     </div><!-- end row--> 
   </div><!-- end container --> 
 </div><!-- end #masthead--> 
+<main id="content" class="archive">

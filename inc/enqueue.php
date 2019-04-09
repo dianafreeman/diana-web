@@ -39,6 +39,10 @@ function library_scripts() {
 	wp_enqueue_script( 'carousel-js', get_stylesheet_directory_uri().'/vendor/slick/slick.min.js', array('jquery'), true );
 
 
+	if (is_page_template( 'page-about.php' )){
+		wp_enqueue_script( 'testimonial-js', get_stylesheet_directory_uri() . '/assets/js/testimonials.js', array('jquery','carousel-js'), true );
+	}
+
 	/* Google Font API */
 	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Space+Mono:400,500|Playball|Lato');
 
@@ -63,6 +67,8 @@ function diana_simple_theme_scripts() {
 
 	}
 
+
+
 	 wp_enqueue_script( 'diana-main', get_stylesheet_directory_uri() . '/assets/js/main.min.js', array('jquery','carousel-js'), '', true );
 
 
@@ -72,6 +78,7 @@ function diana_simple_theme_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'diana_simple_theme_scripts' );
 

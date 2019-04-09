@@ -28,16 +28,23 @@
     }
     .typed-box:not(#about .typed-box) {
         margin-bottom: 15px;
-        // display: inline;
+        height: 100%;
+        margin-bottom: 1em;
+        height: initial;
+        position: absolute;
+        bottom: 0;
         .typed-target {
             @media screen and (min-width: 998px) {
                 font-size: 55px;
+                line-height: 55px;
             }
-            @media screen and (min-width: 568px) {
-                font-size: calc(20px + 5vw);
-            }
-            font-size: 30px;
+            font-size: 36px;
+            line-height: 36px;
             display: inline;
+            .typed-cursor {
+                font-size: 36px !important;
+                line-height: 36px !important;
+            }
         }
     }
     &.half-height {
@@ -48,6 +55,10 @@
             bottom: 0;
             left: 0;
             text-align: left;
+            min-height: 200px;
+            .row {
+                min-height: 200px;
+            }
         }
     }
     .background-div {
@@ -254,7 +265,9 @@
     }
     .typed-target {
         font-size: calc(15px + 5vw);
-        @media screen and (min-width: 996px) {
+    }
+    @media screen and (min-width: 996px) {
+        .typed-target {
             font-size: 50px;
         }
     }

@@ -11,7 +11,6 @@ $title = esc_html(get_the_title($post));
 $post_color = get_field("post_color");
 
 ?>
-<main id="content">
     <!-- ends in the FOOTER.PHP file -->
     <div id="masthead" class="half-height text-white text-center bg-secondary">
         <div class="container-fluid header-content">
@@ -25,3 +24,4 @@ $post_color = get_field("post_color");
             </div><!-- end row-->
         </div><!-- end container -->
     </div>
+    <main id="content">

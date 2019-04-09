@@ -9879,20 +9879,26 @@ section h2 {
 }
 #masthead .typed-box:not(#about .typed-box) {
   margin-bottom: 15px;
+  height: 100%;
+  margin-bottom: 1em;
+  height: initial;
+  position: absolute;
+  bottom: 0;
 }
 #masthead .typed-box:not(#about .typed-box) .typed-target {
-  font-size: 30px;
+  font-size: 36px;
+  line-height: 36px;
   display: inline;
 }
 @media screen and (min-width: 998px) {
   #masthead .typed-box:not(#about .typed-box) .typed-target {
     font-size: 55px;
+    line-height: 55px;
   }
 }
-@media screen and (min-width: 568px) {
-  #masthead .typed-box:not(#about .typed-box) .typed-target {
-    font-size: calc(20px + 5vw);
-  }
+#masthead .typed-box:not(#about .typed-box) .typed-target .typed-cursor {
+  font-size: 36px !important;
+  line-height: 36px !important;
 }
 #masthead.half-height {
   height: 520px;
@@ -9903,6 +9909,10 @@ section h2 {
   bottom: 0;
   left: 0;
   text-align: left;
+  min-height: 200px;
+}
+#masthead.half-height .header-content .row {
+  min-height: 200px;
 }
 #masthead .background-div {
   padding: 20vh 0;
@@ -10275,6 +10285,10 @@ section h2 {
 #portfolio .slick-next::before,
 #portfolio .slick-prev::before {
   font-size: 40px;
+}
+
+.project-link {
+  white-space: normal;
 }
 
 .parallax-background {
@@ -10694,26 +10708,25 @@ h4 {
     margin-top: 3em;
   }
 }
-#about .testimonial {
+#about .testimonial-card {
   min-height: 300px;
 }
-#about .testimonial .card-title {
-  width: 80%;
-  display: inline-block;
-}
-#about .testimonial .card-img-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-#about .testimonial .avatar {
-  border: 0.1rem solid rgba(255, 255, 255, 0.3);
-  max-width: 3rem;
-}
-#about .testimonial button.show-more {
+#about .testimonial-card button.show-more {
   border-radius: 100%;
   float: right;
+  margin-bottom: 1em;
 }
-#about .testimonial .collapse p {
+#about .testimonial-card .full-content {
   font-style: italic;
+  color: #424242;
+  border-radius: 10px;
+  padding: 15px;
+}
+#about .testimonial-card .inline-icon {
+  display: inline;
+}
+#about .testimonial-card .inline-icon + p {
+  display: inline;
 }
 #about .page-section {
   padding-top: 2.5em;
@@ -11364,31 +11377,6 @@ h4 {
 
 .entry-content {
   padding: 20px 0px;
-}
-
-.skip-link {
-  background: none;
-  color: #2E3D57;
-  border-radius: 20px;
-  font-size: 20px;
-  z-index: 100;
-  border: 1px solid gray;
-  color: gray;
-}
-.skip-link:hover, .skip-link:active, .skip-link:focus {
-  outline: none;
-  border: 1px solid white;
-  color: white;
-}
-
-.accessibility-controls {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: inherit;
-}
-.logged-in .accessibility-controls {
-  top: 20px;
 }
 
 .btn-xl, .wpcf7-form .wpcf7-submit {

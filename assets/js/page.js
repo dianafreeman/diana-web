@@ -28,12 +28,23 @@
     }
 
 
-    // Scroll to top button appear
-    $(document).scroll(function() {
-        var scrollDistance = $(window).scrollTop();
-        console.log(scrollDistance);
-    });
 
+})(jQuery); // end on document load;
 
+(function($) {
+    if ($('.testimonial-carousel'))
+        $('.testimonial-carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            centerPadding: '40px',
+            focusOnSelect: true,
+            adaptiveHeight: false,
+            variableWidth: true,
+            slidesToShow: 1,
+            centerMode: true,
+            arrows: true
+
+        });
 
 })(jQuery); // end on document load;
