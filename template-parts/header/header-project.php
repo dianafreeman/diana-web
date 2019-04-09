@@ -19,7 +19,7 @@ $project_link = get_field("project_link");
                 </div><!-- end col-sm-12-->
                 <?php if ($project_link):?> 
                 <div class="col-md-2 mb-3 mt-3 text-center">
-                <a class="btn btn-primary project-link" target="_blank" rel="noreferrer" href="<?php esc_url($project_link) ?>"><?php echo esc_html('Visit '.get_the_title()) ;?></a>
+                <a class="btn btn-primary project-link" target="_blank" rel="noreferrer" href="<?php echo esc_url($project_link) ?>"><?php echo esc_html('Visit '.get_the_title()) ;?></a>
                 </div>
                 <?php endif; ?>
             </div><!-- end row-->

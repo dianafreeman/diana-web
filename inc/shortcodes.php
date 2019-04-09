@@ -58,7 +58,7 @@ add_shortcode('outlined-social', 'outlined_social');
 
 function solid_social(){
   return '<div class="social mx-auto">
-  <a role="button" aria-label="Link to Find Me on Twitter" class="social-link-twitter solid" target="_blank" rel="noopener" href="'.esc_url( "https://twtitter.com/dianasfreeman" ).'" role="button">
+  <a role="button" aria-label="Link to Find Me on Twitter" class="social-link-twitter solid" target="_blank" rel="noopener" href="'.esc_url( "https://twitter.com/dianasfreeman" ).'" role="button">
     <i class="fab fa-twitter"></i>
   </a>
   <a role="button" aria-label="Link to Find Me on LinkedIn" class="social-link-linkedin solid" target="_blank" rel="noopener" href="'.esc_url( "https://www.linkedin.com/in/dianasteakleyfreeman/" ).'"  role="button">

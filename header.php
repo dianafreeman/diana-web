@@ -42,7 +42,7 @@ $construction = get_theme_mod( 'diana_simple_construction_mode' );
         <!-- ******************* The Navbar Area ******************* -->
         <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
        
-            <nav id="mainNav" class="navbar navbar-expand-md bg-dark" aria-label="Main Navigation">
+            <nav id="mainNav" class="navbar navbar-expand-md bg-dark fixed-top" aria-label="Main Navigation">
 
 
                 <!-- Your site title as branding in the menu -->
