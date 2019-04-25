@@ -9,7 +9,7 @@ $title = esc_html(get_the_title($post));
 };
 ?>
   <!-- ends in the FOOTER.PHP file --> 
-<div id="masthead" class="half-height text-white text-center bg-secondary">
+<div id="masthead" class="single-masthead half-height text-white text-center bg-secondary">
 <div class="container-fluid header-content">
   <div class="row">
   <div class="col-sm-12">

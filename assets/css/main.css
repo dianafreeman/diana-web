@@ -9613,8 +9613,6 @@ h3 {
 }
 
 #front-page-header {
-  position: relative;
-  top: calc(20px + 2vw);
   height: 90vh;
   min-height: 520px;
 }
@@ -9657,6 +9655,12 @@ body,
 p {
   font-family: "Lato";
   font-size: 21px;
+}
+
+@media screen and (max-width: 540px) {
+  main#content {
+    width: 100vw;
+  }
 }
 
 h1,
@@ -9869,9 +9873,9 @@ section h2 {
 }
 #masthead.page-masthead {
   min-height: 150px;
-  height: 85vh;
+  height: 80vh;
   display: flex;
-  padding-top: 120px;
+  padding-top: 110px;
 }
 #masthead.page-masthead .container {
   margin-top: 2.5em;
@@ -9896,7 +9900,7 @@ section h2 {
     line-height: 55px;
   }
 }
-#masthead .typed-box:not(#about .typed-box) .typed-target .typed-cursor {
+#masthead .typed-box:not(#about .typed-box) .typed-cursor {
   font-size: 36px !important;
   line-height: 36px !important;
 }
@@ -9915,7 +9919,7 @@ section h2 {
   min-height: 200px;
 }
 #masthead .background-div {
-  padding: 20vh 0;
+  padding-top: 120px;
   width: 100%;
   height: 100%;
 }
@@ -9932,20 +9936,16 @@ section h2 {
   }
 }
 
-.typed-cursor:not(#about.container .typed-cursor) {
-  font-size: calc(15px + 5vw);
-}
-@media screen and (min-width: 998px) {
-  .typed-cursor:not(#about.container .typed-cursor) {
-    font-size: 55px;
-  }
-}
-
 #typed-header {
-  padding-top: calc(25px + 5vw);
+  padding-top: 3em;
   position: static;
   width: 90%;
   margin: 0 auto;
+}
+#typed-header .typed-cursor {
+  font-size: 2em !important;
+  color: #eee;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 #typed-header .string-container {
   padding: calc(20px + 1vw) 0;
@@ -10041,11 +10041,6 @@ section h2 {
     position: relative;
     top: 3px;
   }
-}
-
-.typed-cursor {
-  color: #eee;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #animation-control {
@@ -10210,8 +10205,7 @@ section h2 {
   overflow: hidden;
 }
 #portfolio .card {
-  min-height: 340px;
-  height: 60vh;
+  height: 340px;
   border: none;
 }
 #portfolio .card-body, #portfolio .card-image {
@@ -10295,6 +10289,11 @@ section h2 {
   width: inherit;
   height: inherit;
   background: rgba(0, 0, 0, 0.45);
+}
+@media screen and (max-width: 560px) {
+  .parallax-background {
+    width: 100vw;
+  }
 }
 .parallax-background:before {
   content: "";
@@ -11394,6 +11393,29 @@ h4 {
 .rt-reading-time {
   color: lightgray;
   font-style: italic;
+}
+
+.single-masthead .typed-box,
+.page-masthead .typed-box {
+  display: inline-flex;
+  bottom: 0;
+  margin-bottom: 2em;
+}
+.single-masthead .typed-box:not(#about .single-masthead .typed-box,
+#about .page-masthead .typed-box),
+.page-masthead .typed-box:not(#about .single-masthead .typed-box,
+#about .page-masthead .typed-box) {
+  position: absolute;
+}
+.single-masthead .typed-target,
+.page-masthead .typed-target {
+  display: inline;
+  margin: unset;
+}
+.single-masthead .typed-cursor,
+.page-masthead .typed-cursor {
+  font-size: 2.3em;
+  display: inline-flex;
 }
 
 /*# sourceMappingURL=main.css.map */

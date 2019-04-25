@@ -1,5 +1,8 @@
 .parallax-background {
     width: inherit;
+    @media screen and (max-width: 560px) {
+        width: 100vw;
+    }
     height: inherit;
     background: rgba(0, 0, 0, 0.45);
     &:before {

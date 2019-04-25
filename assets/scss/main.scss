@@ -33,3 +33,23 @@
     color: lightgray;
     font-style: italic;
 }
+
+.single-masthead,
+.page-masthead {
+    .typed-box {
+        display: inline-flex;
+        &:not(#about &) {
+            position: absolute;
+        }
+        bottom: 0;
+        margin-bottom: 2em;
+    }
+    .typed-target {
+        display: inline;
+        margin: unset;
+    }
+    .typed-cursor {
+        font-size: 2.3em;
+        display: inline-flex;
+    }
+}
