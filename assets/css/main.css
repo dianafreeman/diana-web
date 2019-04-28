@@ -11401,10 +11401,8 @@ h4 {
   bottom: 0;
   margin-bottom: 2em;
 }
-.single-masthead .typed-box:not(#about .single-masthead .typed-box,
-#about .page-masthead .typed-box),
-.page-masthead .typed-box:not(#about .single-masthead .typed-box,
-#about .page-masthead .typed-box) {
+.single-masthead .typed-box:not(#about .typed-box),
+.page-masthead .typed-box:not(#about .typed-box) {
   position: absolute;
 }
 .single-masthead .typed-target,

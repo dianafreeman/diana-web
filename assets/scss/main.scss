@@ -38,7 +38,7 @@
 .page-masthead {
     .typed-box {
         display: inline-flex;
-        &:not(#about &) {
+        &:not(#about .typed-box) {
             position: absolute;
         }
         bottom: 0;
