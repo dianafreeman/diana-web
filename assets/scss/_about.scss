@@ -26,6 +26,7 @@
     }
     .typed-box {
         display: inline-flex;
+        position: unset;
         .typed-target {
             font-size: calc(15px + 1vw);
             display: inline;

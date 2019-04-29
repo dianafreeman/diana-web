@@ -65,7 +65,10 @@ $container = get_theme_mod( 'diana_simple_container_type' );
 <br><a role="button" tabindex="0"
     class="text-light muted"
     href="<?php echo esc_url(get_permalink( get_page_by_title( 'Privacy Policy' ) )); ?> ">
-    Privacy Policy</a> <br> Proudly Powered by <a class="text-light muted" target="_blank" rel="noopener" href="<?php echo esc_url('https://wordpress.org') ?>">WordPress</a>. Theme by Me. </p>
+    Privacy Policy</a> <br> 
+    <small>Proudly Powered by 
+    <a class="text-light muted" target="_blank" rel="noopener" href="<?php echo esc_url('https://wordpress.org') ?>">WordPress</a>. |
+    Theme By <a class="text-light muted" target="_blank" rel="noopener" href="<?php echo esc_url('https://github.com/dianafreeman/diana-web') ?>">Yours Truly</p></small>
 </div>
 </div><!-- wrapper end -->
 

@@ -9613,8 +9613,8 @@ h3 {
 }
 
 #front-page-header {
-  height: 90vh;
-  min-height: 520px;
+  max-height: 90vh;
+  height: 520px;
 }
 
 .form-container {
@@ -10285,6 +10285,92 @@ section h2 {
   white-space: normal;
 }
 
+.project-image {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  min-width: 150px;
+  padding: 20px 0;
+}
+
+.tech-terms.single-project .stack-logo {
+  font-size: 40px;
+  padding: 12px;
+}
+.tech-terms .stack-logo {
+  padding: 5px;
+  border: 1px solid #efefef;
+  border-radius: 100%;
+  margin: 0px 5px;
+}
+.tech-terms .stack-logo i {
+  color: #efefef;
+  padding: 3px;
+}
+
+.built-with {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: white;
+  float: left;
+  font-size: 14px;
+}
+
+.single-project .stack-logo.adobe-creative-suite {
+  color: #6a737b !important;
+  background: #ff0000;
+  border: 1px solid #6a737b;
+}
+.single-project .stack-logo.javascript {
+  border: 1px solid black;
+  background: #f7df1e;
+}
+.single-project .stack-logo.javascript i {
+  color: black !important;
+}
+.single-project .stack-logo.grunt {
+  background: #fba919;
+  border: 1px solid #463014;
+}
+.single-project .stack-logo.grunt i {
+  color: #463014 !important;
+}
+.single-project .stack-logo.wordpress {
+  background: #21759b;
+  border: 1px solid white;
+}
+.single-project .stack-logo.wordpress i {
+  color: white !important;
+}
+.single-project .stack-logo.css3 {
+  background: #347dc6;
+  border: 1px solid white;
+}
+.single-project .stack-logo.css3 i {
+  color: white !important;
+}
+.single-project .stack-logo.google-cloud-platform {
+  background: white;
+  border: 1px solid #4285f4;
+}
+.single-project .stack-logo.google-cloud-platform i {
+  color: #ea4335;
+}
+.single-project .stack-logo.node {
+  background: #215732;
+  border: 1px solid white;
+}
+.single-project .stack-logo.node i {
+  color: white;
+}
+.single-project .stack-logo.html5 {
+  background: #e34f26;
+  border: 1px solid white;
+}
+.single-project .stack-logo.html5 i {
+  color: white;
+}
+
 .parallax-background {
   width: inherit;
   height: inherit;
@@ -10673,6 +10759,7 @@ h4 {
 }
 #about .typed-box {
   display: inline-flex;
+  position: unset;
 }
 #about .typed-box .typed-target {
   font-size: calc(15px + 1vw);
@@ -11243,6 +11330,9 @@ h4 {
   min-height: 300px;
   border-top: 10px solid #2E3D57;
 }
+.archive-row .tech-terms {
+  padding-left: 1em;
+}
 @media screen and (max-width: 568px) {
   .archive-row {
     min-height: 70vh;
@@ -11326,19 +11416,6 @@ h4 {
 .archive-row .card-footer .entry-title {
   max-width: 50vw;
 }
-.archive-row .tech-terms {
-  display: none;
-}
-.archive-row .stack-logo {
-  padding: 5px;
-  border: 1px solid #efefef;
-  border-radius: 100%;
-  margin: 0px 5px;
-}
-.archive-row .stack-logo i {
-  color: #efefef;
-  padding: 3px;
-}
 
 #content.archive .typed-cursor {
   font-size: calc(15px + 5vw);
@@ -11398,12 +11475,9 @@ h4 {
 .single-masthead .typed-box,
 .page-masthead .typed-box {
   display: inline-flex;
+  position: absolute;
   bottom: 0;
   margin-bottom: 2em;
-}
-.single-masthead .typed-box:not(#about .typed-box),
-.page-masthead .typed-box:not(#about .typed-box) {
-  position: absolute;
 }
 .single-masthead .typed-target,
 .page-masthead .typed-target {
@@ -11414,6 +11488,11 @@ h4 {
 .page-masthead .typed-cursor {
   font-size: 2.3em;
   display: inline-flex;
+}
+
+.nav-next,
+.nav-previous {
+  color: black !important;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -132,3 +132,95 @@
 .project-link {
     white-space: normal;
 }
+
+.project-image {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    min-width: 150px;
+    padding: 20px 0;
+}
+
+.tech-terms {
+    &.single-project {
+        .stack-logo {
+            font-size: 40px;
+            padding: 12px;
+        }
+    }
+    .stack-logo {
+        padding: 5px;
+        border: 1px solid #efefef;
+        border-radius: 100%;
+        margin: 0px 5px;
+        i {
+            color: #efefef;
+            padding: 3px;
+        }
+    }
+}
+
+.built-with {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: white;
+    float: left;
+    font-size: 14px;
+}
+
+.single-project {
+    .stack-logo.adobe-creative-suite {
+        color: #6a737b !important;
+        background: #ff0000;
+        border: 1px solid #6a737b;
+    }
+    .stack-logo.javascript {
+        i {
+            color: black !important;
+        }
+        border: 1px solid black;
+        background: #f7df1e;
+    }
+    .stack-logo.grunt {
+        i {
+            color: #463014 !important;
+        }
+        background: #fba919;
+        border: 1px solid #463014;
+    }
+    .stack-logo.wordpress {
+        i {
+            color: white !important;
+        }
+        background: #21759b;
+        border: 1px solid white;
+    }
+    .stack-logo.css3 {
+        i {
+            color: white !important;
+        }
+        background: #347dc6;
+        border: 1px solid white;
+    }
+    .stack-logo.google-cloud-platform {
+        i {
+            color: #ea4335;
+        }
+        background: white;
+        border: 1px solid #4285f4;
+    }
+    .stack-logo.node {
+        i {
+            color: white;
+        }
+        background: #215732;
+        border: 1px solid white;
+    }
+    .stack-logo.html5 {
+        i {
+            color: white;
+        }
+        background: #e34f26;
+        border: 1px solid white;
+    }
+}

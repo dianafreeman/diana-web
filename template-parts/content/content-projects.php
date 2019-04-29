@@ -5,7 +5,6 @@
  * @package understrap
  */
 
-
     $is_project = true;
     $project_color = get_field('project_color');
     $project_overlay = hex2rgba($project_color, 0.8);
@@ -21,18 +20,7 @@
 '</a></h2>');?>
 </div><!-- .entry-header -->
 <div class="tech-terms">
-    <p class="small muted">This project uses: </p>
-<?php $tech_terms = get_the_terms(get_the_ID(), 'technologies');
-            //print_r($tech_terms);
-			if ( $tech_terms && ! is_wp_error( $tech_terms )) {
-			foreach ($tech_terms as $term) {
-                $icon_class = get_field('stack_logo',$term);
-                if ($icon_class):
-                echo '<a class="stack-logo" data-toggle="tooltip" data-placement="top" title="'.$term->name.'"><i class="'.$icon_class.'"></i></a>';
-                endif;
-		};
-    };    
-?>
+    <?php get_template_part('term-technologies') ?>
 </div><!-- end tech terms-->
         </div><!-- end card footer-->
         <div class="image-container offset-sm-6 col-sm-6"

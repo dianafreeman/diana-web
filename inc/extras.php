@@ -94,7 +94,7 @@ if ( ! function_exists ( 'diana_simple_post_nav' ) ) {
 			return;
 		}
 		?>
-		<nav class="container navigation post-navigation">
+		<nav class="container-fluid navigation post-navigation">
 			<h2 class="sr-only"><?php _e( 'Post navigation', 'diana-simple' ); ?></h2>
 			<div class="row nav-links justify-content-between">
 				<?php
@@ -102,7 +102,7 @@ if ( ! function_exists ( 'diana_simple_post_nav' ) ) {
 					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'diana-simple' ) );
 				}
 				if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'diana-simple' ) );
+					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right fa-2x"></i>', 'Next post link', 'diana-simple' ) );
 				}
 				?>
 			</div><!-- .nav-links -->

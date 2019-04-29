@@ -1,4 +1,7 @@
 .archive-row {
+    .tech-terms {
+        padding-left: 1em;
+    }
     cursor: pointer;
     position: relative;
     background-position-x: right;
@@ -83,19 +86,6 @@
         }
         .entry-title {
             max-width: 50vw;
-        }
-    }
-    .tech-terms {
-        display: none;
-    }
-    .stack-logo {
-        padding: 5px;
-        border: 1px solid #efefef;
-        border-radius: 100%;
-        margin: 0px 5px;
-        i {
-            color: #efefef;
-            padding: 3px;
         }
     }
 }

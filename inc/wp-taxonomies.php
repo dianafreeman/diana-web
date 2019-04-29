@@ -7,6 +7,7 @@ function diana_simple_create_custom_taxonomy() {
 	register_taxonomy('technologies', array( 'projects' ), array(
 		'show_in_rest' => true,
 		'hierarchical' => false,
+		
 		'labels' => array(
 			'name' => _x( 'Technologies', 'taxonomy general name' ),
 			'singular_name' => _x( 'Technology', 'taxonomy singular name' ),
