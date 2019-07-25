@@ -9614,9 +9614,8 @@ h3 {
 
 #front-page-header {
   position: relative;
-  top: calc(20px + 2vw);
-  height: 90vh;
   min-height: 520px;
+  padding-top: 112px;
 }
 
 .form-container {
@@ -9778,9 +9777,6 @@ section h2 {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
-}
-#mainNav .navbar-nav li.nav-item a:focus {
-  border: 1px solid lightgray;
 }
 #mainNav .navbar-nav li.nav-item::before {
   content: "";
@@ -10035,6 +10031,7 @@ section h2 {
 
 .typed-cursor {
   color: #eee;
+  font-size: 2em;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
@@ -10278,27 +10275,21 @@ section h2 {
 }
 
 .parallax-background {
-  width: inherit;
-  height: inherit;
-  background: rgba(0, 0, 0, 0.45);
-}
-.parallax-background:before {
-  content: "";
-  background-size: cover;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-position: center;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
-  z-index: -1;
 }
-.parallax-background.hero-original:before {
-  background-image: url("../graphics/hero-original.jpg");
+@media screen and (min-width: 568px) {
+  .parallax-background {
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
-.parallax-background.about-img:before {
-  background-image: url("../graphics/about-img.jpg");
+.parallax-background:not(#about-page) {
+  background-position: center;
+}
+.parallax-background .section, .parallax-background section {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #about-page.parallax-background:before {
@@ -10633,12 +10624,6 @@ h4 {
   .main-timeline .timeline-content:after,
 .main-timeline .timeline:nth-child(2n) .timeline-content:after {
     left: 65px;
-  }
-}
-@media screen and (min-width: 768px) {
-  #about.front-page-section {
-    background-attachment: fixed;
-    background-size: cover;
   }
 }
 #about .header-row {

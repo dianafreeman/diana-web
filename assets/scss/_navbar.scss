@@ -13,9 +13,7 @@
     .navbar-nav {
         letter-spacing: 0.0625rem;
         li.nav-item {
-            & a:focus {
-                border: 1px solid lightgray;
-            }
+          
             text-align: center;
             @include hvr-underline-reveal();
             a.nav-link {

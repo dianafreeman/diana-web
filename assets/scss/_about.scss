@@ -1,20 +1,6 @@
 @import './timeline';
 #about {
-    &.front-page-section {
-        @media screen and (min-width: 768px) {
-            background-attachment: fixed;
-            background-size: cover;
-        }
-        .parallax-background {}
-        // background-size: cover;
-        // background-repeat: no-repeat;
-        // background-position: center;
-        // .background-div {
-        //     height: 100%;
-        //     width: 100%;
-        //     background-color: #1d21246e;
-        // }
-    }
+  
     .header-row {
         position: absolute;
         bottom: 0;

@@ -13,9 +13,9 @@ if (is_category()){
   };
 ?>
 <main id="content" >
-<div id="about-page" class="parallax-background">
+<div id="about-page" class="parallax-background" style="background-image: url(<?php echo esc_url(get_stylesheet_directory_uri(  ).'/assets/graphics/about-img.jpg') ?>">
   <!-- ends in the FOOTER.PHP file --> 
-<div id="masthead" class="page-masthead text-white text-center">
+<div id="masthead" class="page-masthead section text-white text-center">
     <div id="about" class="container">
         <div class="row header-row">
             <div class="col-md-10 mx-auto">

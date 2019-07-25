@@ -10,7 +10,7 @@ get_template_part('template-parts/header/header','front-page')
 <?php  get_template_part('template-parts/front-page/front-page','portfolio') ;?>
 </section>
 
-<div class="parallax-background">
+<div class="parallax-background" style="background-image: url(<?php echo esc_url(get_stylesheet_directory_uri(  ).'/assets/graphics/about-img.jpg') ?>">
 <!-- About Section -->
 <section id="about" class="front-page-section text-white ">
   <?php  get_template_part('template-parts/front-page/front-page','about') ;
