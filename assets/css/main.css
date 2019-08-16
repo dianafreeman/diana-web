@@ -11384,4 +11384,9 @@ h4 {
   font-style: italic;
 }
 
+.typed-target {
+  display: inline;
+  padding-bottom: 0.5em;
+}
+
 /*# sourceMappingURL=main.css.map */

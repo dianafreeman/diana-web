@@ -2,11 +2,6 @@
     $('[data-toggle="tooltip"]').tooltip();
     AOS.init();
 
-
-
-
-
-
     // Closes responsive menu when a scroll trigger link is clicked
     $('.js-scroll-trigger').click(function() {
         $('.navbar-collapse').collapse('hide');
@@ -69,6 +64,30 @@
                     settings: {
                         variableWidth: false,
                         arrows: true
+                    }
+                }
+            ]
+        });
+        $('.testimonial-carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            focusOnSelect: true,
+            centerMode: false,
+            slidesToShow: 2,
+            arrows: true,
+            responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        arrows: true
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: true,
+                        slidesToShow: 1,
+
                     }
                 }
             ]
